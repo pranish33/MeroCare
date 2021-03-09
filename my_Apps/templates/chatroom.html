@@ -1,0 +1,30 @@
+{% include 'navbar.html' %}
+{% include 'include.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.css" />
+</head>
+<body>
+    <div class="chat-container"></div>
+
+    <script src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js" /></script>
+    <script type="text/javascript">
+        var chatroom = new window.Chatroom({
+            host: "http://localhost:5005",
+            title: "MeroCare Personal Health Assistant!",
+            container: document.querySelector(".chat-container"),
+            welcomeMessage: "Hi! I' m MeroCare's Personal Assistant. To get Started, simply ask me a question. I am still Learning, so If i Can't Help you, I will direct you to additional resources. ",
+            speechRecognition: "en-US",
+            voiceLang: "en-US"
+        });
+        chatroom.openChat();
+    </script>
+</body>
+</html>
+{% endblock %}
