@@ -2,29 +2,507 @@ version: "2.0"
 
 stories:
 
-- story: happy path
+- story: Recommendation
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+  - intent: feature_recommendation
+  - action: utter_feature_recommendation
+  - action: utter_get_gender
+  - intent: get_gender_m
+  - action: utter_get_age_group
   - intent: affirm
-  - action: utter_happy
+  - action: utter_get_Diabetes_Type
+  - intent: get_Diabetes_Type1
+  - action: utter_male_yes_type1
+  - intent: goodbye
+  - action: utter_goodbye
 
-- story: sad path 2
+- story: Recommendation
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+  - intent: feature_recommendation
+  - action: utter_feature_recommendation
+  - action: utter_get_gender
+  - intent: get_gender_f
+  - action: utter_get_age_group
+  - intent: affirm
+  - action: utter_get_Diabetes_Type
+  - intent: get_Diabetes_Type1
+  - action: utter_female_yes_type1
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Recommendation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feature_recommendation
+  - action: utter_feature_recommendation
+  - action: utter_get_gender
+  - intent: get_gender_m
+  - action: utter_get_age_group
   - intent: deny
+  - action: utter_get_Diabetes_Type
+  - intent: get_Diabetes_Type1
+  - action: utter_male_no_type1
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Recommendation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feature_recommendation
+  - action: utter_feature_recommendation
+  - action: utter_get_gender
+  - intent: get_gender_f
+  - action: utter_get_age_group
+  - intent: deny
+  - action: utter_get_Diabetes_Type
+  - intent: get_Diabetes_Type1
+  - action: utter_female_no_type1
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Recommendation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feature_recommendation
+  - action: utter_feature_recommendation
+  - action: utter_get_gender
+  - intent: get_gender_m
+  - action: utter_get_age_group
+  - intent: affirm
+  - action: utter_get_Diabetes_Type
+  - intent: get_Diabetes_Type2
+  - action: utter_male_yes_type2
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Recommendation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feature_recommendation
+  - action: utter_feature_recommendation
+  - action: utter_get_gender
+  - intent: get_gender_f
+  - action: utter_get_age_group
+  - intent: affirm
+  - action: utter_get_Diabetes_Type
+  - intent: get_Diabetes_Type2
+  - action: utter_female_yes_type2
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Recommendation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feature_recommendation
+  - action: utter_feature_recommendation
+  - action: utter_get_gender
+  - intent: get_gender_m
+  - action: utter_get_age_group
+  - intent: deny
+  - action: utter_get_Diabetes_Type
+  - intent: get_Diabetes_Type2
+  - action: utter_male_no_type2
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Recommendation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feature_recommendation
+  - action: utter_feature_recommendation
+  - action: utter_get_gender
+  - intent: get_gender_f
+  - action: utter_get_age_group
+  - intent: deny
+  - action: utter_get_Diabetes_Type
+  - intent: get_Diabetes_Type2
+  - action: utter_female_no_type2
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Diabetes
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diabetes
+  - action: utter_diabetes
+  - intent: welcome
+  - action: utter_welcome
+  - intent: goodbye
+  - action: utter_goodbye
+  
+- story: Reminder
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feature_reminder
+  - action: utter_reminder_type
+  - intent: medicine_reminder
+  - action: utter_confirm_reminder_medicine
+  - intent: set_time
+  - action: utter_reminder_confirmation
+  - intent: goodbye
+  - action: utter_goodbye
+  
+- story: Reminder
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feature_reminder
+  - action: utter_reminder_type
+  - intent: food_reminder
+  - action: utter_confirm_reminder_food
+  - intent: set_time
+  - action: utter_reminder_confirmation
+  - intent: goodbye
+  - action: utter_goodbye
+  
+- story: Reminder
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feature_reminder
+  - action: utter_reminder_type
+  - intent: appointment_reminder
+  - action: utter_confirm_reminder_appointment
+  - intent: set_time
+  - action: utter_reminder_confirmation
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+# [1111] - Above age 45, BMI>25, has symptoms and experienced Sudden Weight Loss - (HIGH RISK)
+- story: Diagnosis
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diagnosis
+  - action: utter_diagnosis
+  - action: utter_get_age_group
+  - intent: affirm
+  - action: utter_get_bmi
+  - intent: affirm
+  - action: utter_get_symptoms
+  - intent: affirm
+  - action: utter_weight_loss
+  - intent: affirm
+  - action: utter_high_risk
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+# [0111] - Below age 45,  but BMI>25, experienced Sudden Weight Loss and has Symptoms- (HIGH RISK)
+- story: Diagnosis
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diagnosis
+  - action: utter_diagnosis
+  - action: utter_get_age_group
+  - intent: deny
+  - action: utter_get_bmi
+  - intent: affirm
+  - action: utter_get_symptoms
+  - intent: affirm
+  - action: utter_weight_loss
+  - intent: affirm
+  - action: utter_high_risk
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+# [0110] - Below age 45 and did not experience Sudden Weight Loss,  but BMI>25 and has Symptoms - (HIGH RISK)
+- story: Diagnosis
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diagnosis
+  - action: utter_diagnosis
+  - action: utter_get_age_group
+  - intent: deny
+  - action: utter_get_bmi
+  - intent: affirm
+  - action: utter_get_symptoms
+  - intent: affirm
+  - action: utter_weight_loss
+  - intent: deny
+  - action: utter_high_risk
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+# [0011] - Below age 45 and BMI<25, but experienced Sudden Weight Loss, and has Symptoms - (HIGH RISK)
+- story: Diagnosis
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diagnosis
+  - action: utter_diagnosis
+  - action: utter_get_age_group
+  - intent: deny
+  - action: utter_get_bmi
+  - intent: deny
+  - action: utter_get_symptoms
+  - intent: affirm
+  - action: utter_weight_loss
+  - intent: affirm
+  - action: utter_high_risk
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+# [1110] - Did not experience Sudden Weight Loss, but above age 45, BMI>25 and has Symptoms - (HIGH RISK)
+- story: Diagnosis
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diagnosis
+  - action: utter_diagnosis
+  - action: utter_get_age_group
+  - intent: affirm
+  - action: utter_get_bmi
+  - intent: affirm
+  - action: utter_get_symptoms
+  - intent: affirm
+  - action: utter_weight_loss
+  - intent: deny
+  - action: utter_high_risk
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+# [1011] - BMI<25, but Above age 45, has symptoms and experienced Sudden Weight Loss - (HIGH RISK)
+- story: Diagnosis
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diagnosis
+  - action: utter_diagnosis
+  - action: utter_get_age_group
+  - intent: affirm
+  - action: utter_get_bmi
+  - intent: deny
+  - action: utter_get_symptoms
+  - intent: affirm
+  - action: utter_weight_loss
+  - intent: affirm
+  - action: utter_high_risk
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+# [0010] - Below age 45 and BMI<25, did not experience Sudden Weight Loss, but has Symptoms - (MODERATE RISK)
+- story: Diagnosis
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diagnosis
+  - action: utter_diagnosis
+  - action: utter_get_age_group
+  - intent: deny
+  - action: utter_get_bmi
+  - intent: deny
+  - action: utter_get_symptoms
+  - intent: affirm
+  - action: utter_weight_loss
+  - intent: deny
+  - action: utter_moderate_risk
+  - intent: goodbye
+  - action: utter_goodbye
+
+# [1010] - BMI<25 and did not experience Sudden Weight Loss, but Above age 45 and has Symptoms - (MODERATE RISK)
+- story: Diagnosis
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diagnosis
+  - action: utter_diagnosis
+  - action: utter_get_age_group
+  - intent: affirm
+  - action: utter_get_bmi
+  - intent: deny
+  - action: utter_get_symptoms
+  - intent: affirm
+  - action: utter_weight_loss
+  - intent: deny
+  - action: utter_moderate_risk
+  - intent: goodbye
+  - action: utter_goodbye
+
+# [0101] - (MODERATE RISK)
+- story: Diagnosis
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diagnosis
+  - action: utter_diagnosis
+  - action: utter_get_age_group
+  - intent: deny
+  - action: utter_get_bmi
+  - intent: affirm
+  - action: utter_get_symptoms
+  - intent: deny
+  - action: utter_weight_loss
+  - intent: affirm
+  - action: utter_moderate_risk
+  - intent: goodbye
+  - action: utter_goodbye
+
+# [1101] - (MODERATE RISK)
+- story: Diagnosis
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diagnosis
+  - action: utter_diagnosis
+  - action: utter_get_age_group
+  - intent: affirm
+  - action: utter_get_bmi
+  - intent: affirm
+  - action: utter_get_symptoms
+  - intent: deny
+  - action: utter_weight_loss
+  - intent: affirm
+  - action: utter_moderate_risk
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+# [0000] - (LOW RISK)
+- story: Diagnosis
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diagnosis
+  - action: utter_diagnosis
+  - action: utter_get_age_group
+  - intent: deny
+  - action: utter_get_bmi
+  - intent: deny
+  - action: utter_get_symptoms
+  - intent: deny
+  - action: utter_weight_loss
+  - intent: deny
+  - action: utter_low_risk
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+# [0001] - (LOW RISK)
+- story: Diagnosis
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diagnosis
+  - action: utter_diagnosis
+  - action: utter_get_age_group
+  - intent: deny
+  - action: utter_get_bmi
+  - intent: deny
+  - action: utter_get_symptoms
+  - intent: deny
+  - action: utter_weight_loss
+  - intent: affirm
+  - action: utter_low_risk
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+# [1000] - (LOW RISK)
+- story: Diagnosis
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diagnosis
+  - action: utter_diagnosis
+  - action: utter_get_age_group
+  - intent: affirm
+  - action: utter_get_bmi
+  - intent: deny
+  - action: utter_get_symptoms
+  - intent: deny
+  - action: utter_weight_loss
+  - intent: deny
+  - action: utter_low_risk
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+  # [0100] - (LOW RISK)
+- story: Diagnosis
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diagnosis
+  - action: utter_diagnosis
+  - action: utter_get_age_group
+  - intent: deny
+  - action: utter_get_bmi
+  - intent: affirm
+  - action: utter_get_symptoms
+  - intent: deny
+  - action: utter_weight_loss
+  - intent: deny
+  - action: utter_low_risk
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+  # [1100] - (LOW RISK)
+- story: Diagnosis
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diagnosis
+  - action: utter_diagnosis
+  - action: utter_get_age_group
+  - intent: affirm
+  - action: utter_get_bmi
+  - intent: affirm
+  - action: utter_get_symptoms
+  - intent: deny
+  - action: utter_weight_loss
+  - intent: deny
+  - action: utter_low_risk
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+  # [1001] - (LOW RISK)
+- story: Diagnosis
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diagnosis
+  - action: utter_diagnosis
+  - action: utter_get_age_group
+  - intent: affirm
+  - action: utter_get_bmi
+  - intent: deny
+  - action: utter_get_symptoms
+  - intent: deny
+  - action: utter_weight_loss
+  - intent: affirm
+  - action: utter_low_risk
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+- story: Diabetes
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diabetes
+  - action: utter_diabetes
+  - intent: goodbye
   - action: utter_goodbye

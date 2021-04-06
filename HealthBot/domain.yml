@@ -1,34 +1,240 @@
-version: "2.0"
-
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-
-responses:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
+version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- feature_recommendation:
+    use_entities: true
+- get_gender_m:
+    use_entities: true
+- get_gender_f:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- get_Diabetes_Type1:
+    use_entities: true
+- get_Diabetes_Type2:
+    use_entities: true
+- feature_reminder:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- medicine_reminder:
+    use_entities: true
+- food_reminder:
+    use_entities: true
+- appointment_reminder:
+    use_entities: true
+- set_time:
+    use_entities: true
+- diagnosis:
+    use_entities: true
+- diabetes:
+    use_entities: true
+- welcome:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: |2-
+
+       Hello!
+       This is your *MeroCare Diabetesbot*, here to help you. :')
+
+       Diabetes is a manageable condition, but if left untreated it can cause serious harm.
+
+       Here's how I can help you.
+       Select one of these options: 
+       * Diagnosis
+       * Recommendation
+       * Reminder
+  utter_feature_recommendation:
+  - text: |-
+      I can give recommendations to help you manage your Diabetes and suggest some lifestyle changes.
+      Before that, I need you to answer some simple questions.
+  utter_get_gender:
+  - text: "What's your Gender (M|F):"
+  utter_get_age_group:
+  - text: 'Are you above the age of 45? (Y|N):'
+  utter_get_Diabetes_Type:
+  - text: |
+      One last question,
+       What's your Diabetes Type? (Type1|Type2):
+       - Type 1: Your body does not produce Insulin at all
+       - Type 2: Your body does not respond to Insulin as it should
+  utter_male_yes_type1:
+  - text: |-
+      Exercise is an important part of treating type 1. 
+      But it isn’t as simple as going for a run. Exercise affects your blood sugar levels.
+      So you have to balance your insulin dose and the food you eat with any activity, even simple tasks around the house or yard.
+      Knowledge is power. Check your blood sugar before, during, and after an activity to find out how it affects you.
+      Some things will make your levels go up; others won't. You can lower your insulin or have a snack with carbs to keep it from dropping too low.
+      If your blood sugar is high -- above 240 mg/dL -- test for ketones, the acids that can result from high sugar levels.
+      If they’re OK, you should be good to go. If they’re high, skip the workout. You’ll also need to understand how food affects your blood sugar.
+      Once you know the roles that carbs, fats, and protein play, you can build a healthy eating plan that helps keep your levels where they should be.
+      A diabetes educator or registered dietitian can help you get started.
+  utter_female_yes_type1:
+  - text: |-
+      Exercise is an important part of treating type 1. 
+      But it isn’t as simple as going for a run. Exercise affects your blood sugar levels.
+      So you have to balance your insulin dose and the food you eat with any activity, even simple tasks around the house or yard.
+      Knowledge is power. Check your blood sugar before, during, and after an activity to find out how it affects you.
+      Some things will make your levels go up; others won't. You can lower your insulin or have a snack with carbs to keep it from dropping too low.
+      If your blood sugar is high -- above 240 mg/dL -- test for ketones, the acids that can result from high sugar levels.
+      If they’re OK, you should be good to go. If they’re high, skip the workout. You’ll also need to understand how food affects your blood sugar.
+      Once you know the roles that carbs, fats, and protein play, you can build a healthy eating plan that helps keep your levels where they should be.
+      A diabetes educator or registered dietitian can help you get started.
+  utter_male_no_type1:
+  - text: |-
+      Exercise is an important part of treating type 1.
+      But it isn’t as simple as going for a run. Exercise affects your blood sugar levels.
+       So you have to balance your insulin dose and the food you eat with any activity, even simple tasks around the house or yard.
+       Knowledge is power. Check your blood sugar before, during, and after an activity to find out how it affects you.
+       Some things will make your levels go up; others won't. You can lower your insulin or have a snack with carbs to keep it from dropping too low.
+       If your blood sugar is high -- above 240 mg/dL -- test for ketones, the acids that can result from high sugar levels.
+       If they’re OK, you should be good to go. If they’re high, skip the workout. You’ll also need to understand how food affects your blood sugar.
+       Once you know the roles that carbs, fats, and protein play, you can build a healthy eating plan that helps keep your levels where they should be.
+       A diabetes educator or registered dietitian can help you get started.
+       
+  utter_female_no_type1:
+  - text: |-
+      Exercise is an important part of treating type 1.
+      But it isn’t as simple as going for a run. Exercise affects your blood sugar levels.
+       So you have to balance your insulin dose and the food you eat with any activity, even simple tasks around the house or yard.
+       Knowledge is power. Check your blood sugar before, during, and after an activity to find out how it affects you.
+       Some things will make your levels go up; others won't. You can lower your insulin or have a snack with carbs to keep it from dropping too low.
+       If your blood sugar is high -- above 240 mg/dL -- test for ketones, the acids that can result from high sugar levels.
+       If they’re OK, you should be good to go. If they’re high, skip the workout. You’ll also need to understand how food affects your blood sugar.
+       Once you know the roles that carbs, fats, and protein play, you can build a healthy eating plan that helps keep your levels where they should be.
+       A diabetes educator or registered dietitian can help you get started.
+       
+  utter_male_yes_type2:
+  - text: |-
+      Balancing your meals can improve your bodily health and delay the onset of diabetes symptoms.
+      Try to get an even mixture of:
+      - starches
+      - fruits and vegetables
+      - fats
+      - proteins
+      You should avoid excess sugar, especially in carbonated drinks such as soda and in candies.
+      Keep a regular exercise schedule and manage your blood sugar within your exercise regimen.
+      This can allow you to get the full benefits of a workout without feeling shaky, tired, dizzy, or anxious. 
+  utter_female_yes_type2:
+  - text: |-
+      Balancing your meals can improve your bodily health and delay the onset of diabetes symptoms.
+      Try to get an even mixture of:
+      - starches
+      - fruits and vegetables
+      - fats
+      - proteins
+      You should avoid excess sugar, especially in carbonated drinks such as soda and in candies.
+      Keep a regular exercise schedule and manage your blood sugar within your exercise regimen.
+      This can allow you to get the full benefits of a workout without feeling shaky, tired, dizzy, or anxious. 
+  utter_male_no_type2:
+  - text: |-
+      Balancing your meals can improve your bodily health and delay the onset of diabetes symptoms.
+       Try to get an even mixture of:
+       - starches
+       - fruits and vegetables
+       - fats
+       - proteins
+       You should avoid excess sugar, especially in carbonated drinks such as soda and in candies.
+       Keep a regular exercise schedule and manage your blood sugar within your exercise regimen.
+       This can allow you to get the full benefits of a workout without feeling shaky, tired, dizzy, or anxious. 
+  utter_female_no_type2:
+  - text: |-
+      Balancing your meals can improve your bodily health and delay the onset of diabetes symptoms.
+       Try to get an even mixture of:
+       - starches
+       - fruits and vegetables
+       - fats
+       - proteins
+       You should avoid excess sugar, especially in carbonated drinks such as soda and in candies.
+       Keep a regular exercise schedule and manage your blood sugar within your exercise regimen.
+       This can allow you to get the full benefits of a workout without feeling shaky, tired, dizzy, or anxious. 
+  utter_reminder_type:
+  - text: |-
+      Taking your meals and medicine on time, is one of the most important thing in self management of Diabetes.
+      But it gets hard to remember these some times.
+      No worries, Diabetes Bot to the rescue! :D
+
+      I can help you set Reminders for the following, please choose one option.
+      Food | Medicine | Appointment
+  utter_confirm_reminder_medicine:
+  - text: 'Medicine Reminder, Set Time:'
+  utter_confirm_reminder_food:
+  - text: 'Food Reminder, Set Time:'
+  utter_confirm_reminder_appointment:
+  - text: 'Appointment Reminder, Set Time:'
+  utter_reminder_confirmation:
+  - text: Reminder Set!
+  utter_diagnosis:
+  - text: |+
+      I can help you diagnose if you have Diabetes or not.
+       I'll be asking you some questions, to evaluate your Risk Level of Diabetes.
+       Answer them to the best of your knowledge.
+
+  utter_get_bmi:
+  - text: |-
+      And is your BMI above 25? (Y|N)
+       Don't worry if you don't remember it.
+       You can check your BMI here: [Check BMI](https://www.calculator.net/bmi-calculator.html)
+  utter_get_symptoms:
+  - text: |-
+      Okay now the most important one!
+       Do you have any of the following symptoms?[Y|N] 
+       - Excessive Hunger 
+       - Excessive Thirst 
+       - Blurred Vision 
+       - Fatigue 
+       - Frequent Urination
+       - Cuts healing slowly
+       - Numbness
+  utter_weight_loss:
+  - text: Final question, Did you recently experience Sudden Weight Loss?
+  utter_high_risk:
+  - text: |-
+      You are displaying many of the symptoms of diabetes.
+
+       --You are at HIGH RISK of Diabetes--
+
+       It’s important that you speak to your General Physician ASAP, and get tested for the condition.
+  utter_moderate_risk:
+  - text: |-
+      You are displaying several of the signs of diabetes.
+
+       --You are at Moderate Risk of Diabetes--
+
+       As this condition can be serious if left untreated, it’s advisable that you make an appointment with your local General Physician to discuss your symptoms.
+  utter_low_risk:
+  - text: |-
+      Your results indicate that you probably don’t have diabetes.
+
+       --You are at Low Risk of Diabetes--
+
+       However, as this condition can come on slowly, and many of the symptoms may go unnoticed, make sure to raise any concerns with your General Physician.
+  utter_goodbye:
+  - text: Bye! Take good care of yourself. :)
+  utter_iamabot:
+  - text: I am a bot, powered by MeroCare.
+  utter_diabetes:
+  - text: Diabetes is a metabolic disorder that occurs when your blood sugar (glucose), is too high.
+  - text: Diabetes is a condition that impairs the body's ability to process blood glucose, otherwise known as blood sugar
+  - text: Diabetes mellitus refers to a group of diseases that affect how your body uses blood sugar (glucose).
+
+  utter_welcome:
+  - text: You are welcome
+  - text: Pleasure is mine
+
+actions: []
+forms: {}
+e2e_actions: []

@@ -6,6 +6,7 @@ nlu:
     - hey
     - hello
     - hi
+    - hola
     - hello there
     - good morning
     - good evening
@@ -16,7 +17,7 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
+    
 - intent: goodbye
   examples: |
     - good afternoon
@@ -30,59 +31,11 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - thanks
+    - thank you
+    - thank
+    - ty
+    - ok
 
 - intent: bot_challenge
   examples: |
@@ -90,3 +43,204 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: feature_recommendation
+  examples: |
+    - Recommendation
+    - recommendation
+    - recommend
+    - Recommend
+    - recom
+    - Recom
+    - Please provide Recommendation
+    - please provide recommendation
+    - please Recommend
+    - Please recommend
+    - Recommend me
+    - recommend Me
+    - Give Recommendations
+    - give recommendations
+    
+- intent: get_gender_m
+  examples: |
+    - i am Male
+    - M
+    - m
+    - i'm Male
+    - male
+    
+- intent: get_gender_f
+  examples: |
+    - Female
+    - I'm Female
+    - F
+    - f
+    - i'm female
+    - female
+
+- intent: affirm
+  examples: |
+    - Y
+    - y
+    - Yes
+    - yes
+    - Correct
+    - correct
+    - true
+    - True
+    - Ye
+    - yep
+    - Yes I do
+    - I do
+    
+- intent: deny
+  examples: |
+    - N
+    - n
+    - No
+    - no
+    - I don't think so
+    - nah
+    - Nope
+    - nope
+    - Incorrect
+    - incorrect
+    - false
+    - False
+    
+- intent: get_Diabetes_Type1
+  examples: |
+    - i'm Type1 Diabetic
+    - im type 1 diabetic
+    - type 1
+    - Type 1
+    - t1
+    - t 1
+    - T 1
+    - T1
+    - Type1
+    - Type 1 diabetic
+    - type1 diabetic
+ 
+- intent: get_Diabetes_Type2
+  examples: |
+    - i'm Type2 Diabetic
+    - im type 2 diabetic
+    - type 2
+    - Type 2
+    - t2
+    - t 2
+    - T 2
+    - T2
+    - Type2
+    - Type 2 diabetic
+    - type2 diabetic
+    
+- intent: feature_reminder
+  examples: |
+    - Reminder
+    - reminder
+    - Remind me
+    - remind me
+    - Remind
+    - remind
+    - rem
+    - Rem
+    - set reminder
+    
+- intent: medicine_reminder
+  examples: |
+    - medicine
+    - meds
+    - Meds
+    - Medicines
+    - med
+    - Med
+    
+- intent: food_reminder
+  examples: |
+    - food
+    - eat
+    - remind me food
+    - lunch
+    - dinner
+    - breakfast
+    
+- intent: appointment_reminder
+  examples: |
+    - appointment
+    - doctor
+    - appoint
+    
+- intent: set_time
+  examples: |
+    - 12pm
+    - 10am
+    - 10:30
+    - 1300
+    - 12 oclock
+    - 1 oclock
+    - 15:29
+    - 1 pm
+    - 2 am
+
+- intent: diagnosis
+  examples: |
+    - diagnosis
+    - diagnose
+    - Diagnosis
+    - diag
+    - dig
+
+- intent: symptoms
+  examples: |
+    - symptom
+    - sign
+    - symptoms
+    - what are the sign and symptoms
+    - what are the sign
+    - what are the sign
+
+- intent: types
+  examples: |
+
+    - type
+    - types
+    - what are the types of diabetes
+    - diabetes types
+    - how many types of symptoms are there in diabetes?
+
+- intent: type1_diabetes
+  examples: |
+
+    - type1
+    - explain type1 diabetes
+    - Tell me about type 1 diabetes
+    - what is  type 1
+
+- intent: type2_diabetes
+  examples: |
+
+    - type2
+    - explain type 2 diabetes
+    - Tell me about type 2 diabetes
+    - what is  type 2
+
+- intent: diabetes
+  examples: |
+
+    - diabetes
+    - explain diabetes
+    - Tell me about diabetes
+    - what is  diabetes
+
+- intent: welcome
+  examples: |
+
+    - It's my pleasure
+    - you are welcome
+    - Take Care
+    - great
+    - great keep it up 
+    
+    

@@ -6,7 +6,7 @@
     {% load static %}
 </head>
 
-<body>
+<body style="background-image: url('{% static 'img/health-care-7.jpg' %}'); background-repeat: no-repeat; background-size: cover;">
     {% include 'adminnav.html' %}
     <div id="wrapper">
         {% include 'patient_nav.html' %}
@@ -15,7 +15,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div>
-                            <h1 class="text-center">You are sucessfully logged in..{{ user.first_name }}</h1>
+                            <h1 class="text-center p-3 mb-2  text-white">You are sucessfully logged in..{{ user.first_name }}</h1>
+                            <h3 class="text-center p-3 mb-2  text-white">You can view your appointment and also you can see your precription report.</h3>
                         </div>
                     </div>
                 </div>

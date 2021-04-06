@@ -3,8 +3,8 @@
     "",
     "\\MeroCare",
     "\\my_Apps",
-    "\\my_Apps\\templates"
+    "\\my_Apps\\static\\css"
   ],
-  "SelectedNode": "\\my_Apps\\views.py",
+  "SelectedNode": "\\MeroCare\\settings.py",
   "PreviewInSolutionExplorer": false
 }

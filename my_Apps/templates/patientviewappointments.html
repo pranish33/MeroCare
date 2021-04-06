@@ -35,10 +35,7 @@
                                         <td>Appointment Date:</td>
                                         <td>{{i.appointmentdate}}</td>
                                     </tr>
-                                    <tr>
-                                        <td>Appointment Time:</td>
-                                        <td>{{i.appointmenttime}}</td>
-                                    </tr>
+                                   
                                     <tr>
                                         <td>Symptoms:</td>
                                         <td>{{i.symptoms}}</td>
@@ -59,7 +56,7 @@
                     <ul class="collapsible popout text-center" data-collapsible="accordion">
                         <li class="card">
                             <div class="card-header collapsible-header">
-                                <h5 style="color:blue;"><a><i class="fa fa-calendar-check-o"></i>  {{ j.patientname }} appointment with {{ j.doctorname }} on {{j.appointmentdate}}</a></h5>
+                                <h5 style="color:blue;"><a><i class="fa fa-calendar-check-o"></i>  {{ j.patientname }} appointment with Dr. {{ j.doctorname }} on {{j.appointmentdate}}</a></h5>
                             </div>
                             <div class="card-body collapsible-body">
                                 <table align="center" class="card-text" style="font-size: 19px;">
@@ -75,10 +72,7 @@
                                         <td>Appointment Date:</td>
                                         <td>{{j.appointmentdate}}</td>
                                     </tr>
-                                    <tr>
-                                        <td>Appointment Time:</td>
-                                        <td>{{j.appointmenttime}}</td>
-                                    </tr>
+                                  
                                     <tr>
                                         <td>Symptoms:</td>
                                         <td>{{j.symptoms}}</td>
@@ -86,6 +80,10 @@
                                     <tr>
                                         <td>Prescription:</td>
                                         <td>{{j.prescription}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Follow Up Date</td>
+                                        <td>{{j.followupdate}}</td>
                                     </tr>
                                 </table>
                             </div>

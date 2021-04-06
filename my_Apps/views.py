@@ -72,21 +72,21 @@ def createaccountpage(request):
 		bloodgroup = request.POST['bloodgroup']
 		try:
 			if password == repeatpassword:
-				Patient.objects.create(name=name,email=email,gender=gender,phonenumber=phonenumber,bloodgroup=bloodgroup)
+				Patient.objects.create(name=name,email=email,gender=gender,phonenumber=phonenumber,address=address,bloodgroup=bloodgroup)
 				user = User.objects.create_user(first_name=name,email=email,password=password,username=email)
 				pat_group = Group.objects.get(name='Patient')
 				pat_group.user_set.add(user)
-				#print(pat_group)
+				
 				user.save()
-				#print(user)
+				
 				error = "no"
 			else:
 				error = "yes"
 		except Exception as e:
 			error = "yes"
-			#print("Error:",e)
+			
 	d = {'error' : error}
-	#print(error)
+	
 	return render(request,'createaccount.html',d)
 	
 
@@ -104,13 +104,14 @@ def adminaddDoctor(request):
 		gender = request.POST['gender']
 		phonenumber = request.POST['phonenumber']
 		address = request.POST['address']
-		birthdate = request.POST['dateofbirth']
+		nmcnumber = request.POST['nmcnumber']
+		
 		bloodgroup = request.POST['bloodgroup']
 		specialization = request.POST['specialization']
 		
 		try:
 			if password == repeatpassword:
-				Doctor.objects.create(name=name,email=email,gender=gender,phonenumber=phonenumber,address=address,birthdate=birthdate,bloodgroup=bloodgroup,specialization=specialization)
+				Doctor.objects.create(name=name,email=email,gender=gender,phonenumber=phonenumber,address=address,nmcnumber=nmcnumber,bloodgroup=bloodgroup,specialization=specialization)
 				user = User.objects.create_user(first_name=name,email=email,password=password,username=email)
 				doc_group = Group.objects.get(name='Doctor')
 				doc_group.user_set.add(user)
@@ -218,10 +219,10 @@ def MakeAppointments(request):
 			patientname = request.POST['patientname']
 			patientemail = request.POST['patientemail']
 			appointmentdate = request.POST['appointmentdate']
-			appointmenttime = request.POST['appointmenttime']
+			
 			symptoms = request.POST['symptoms']
 			try:
-				Appointment.objects.create(doctorname=doctorname,doctoremail=doctoremail,patientname=patientname,patientemail=patientemail,appointmentdate=appointmentdate,appointmenttime=appointmenttime,symptoms=symptoms,status=True,prescription="")
+				Appointment.objects.create(doctorname=doctorname,doctoremail=doctoremail,patientname=patientname,patientemail=patientemail,appointmentdate=appointmentdate,symptoms=symptoms,status=True,prescription="")
 				error = "no"
 			except:
 				error = "yes"
@@ -237,24 +238,22 @@ def viewappointments(request):
 	g = request.user.groups.all()[0].name
 	if g == 'Patient':
 		upcomming_appointments = Appointment.objects.filter(patientemail=request.user,appointmentdate__gte=timezone.now(),status=True).order_by('appointmentdate')
-		#print("Upcomming Appointment",upcomming_appointments)
+		
 		previous_appointments = Appointment.objects.filter(patientemail=request.user,appointmentdate__lt=timezone.now()).order_by('-appointmentdate') | Appointment.objects.filter(patientemail=request.user,status=False).order_by('-appointmentdate')
-		#print("Previous Appointment",previous_appointments)
+		
 		d = { "upcomming_appointments" : upcomming_appointments, "previous_appointments" : previous_appointments }
 		return render(request,'patientviewappointments.html',d)
 	elif g == 'Doctor':
 		if request.method == 'POST':
 			prescriptiondata = request.POST['prescription']
+			followupdata = request.POST['followupdate']
 			idvalue = request.POST['idofappointment']
-			Appointment.objects.filter(id=idvalue).update(prescription=prescriptiondata,status=False)
-			#print(idvalue)
-			#print(pname)
-			#p = {"idvalue":idvalue,"pname":pname}
-			#return render(request,'doctoraddprescription.html',p)
+			Appointment.objects.filter(id=idvalue).update(prescription=prescriptiondata,followupdate=followupdata,status=False)
+			
 		upcomming_appointments = Appointment.objects.filter(doctoremail=request.user,appointmentdate__gte=timezone.now(),status=True).order_by('appointmentdate')
-		#print("Upcomming Appointment",upcomming_appointments)
+		
 		previous_appointments = Appointment.objects.filter(doctoremail=request.user,appointmentdate__lt=timezone.now()).order_by('-appointmentdate') | Appointment.objects.filter(doctoremail=request.user,status=False).order_by('-appointmentdate')
-		#print("Previous Appointment",previous_appointments)
+		
 		d = { "upcomming_appointments" : upcomming_appointments, "previous_appointments" : previous_appointments }
 		return render(request,'doctorviewappointment.html',d)
 	

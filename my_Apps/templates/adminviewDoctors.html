@@ -31,10 +31,12 @@
                                     <th>Email</th>
                                     <th>Gender</th>
                                     <th>Phone Number</th>
-                                    <th>Date of Birth</th>
+                                    
                                     <th>Blood Group</th>
                                     <th>Specialization</th>
+                                    <th>NMC Number</th>
                                     <th>Address</th>
+                                    <th>Update</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -45,10 +47,13 @@
                                     <td>{{ i.email }}</td>
                                     <td>{{ i.gender }}</td>
                                     <td>{{ i.phonenumber }}</td>
-                                    <td>{{ i.birthdate }}</td>
+                                    
                                     <td>{{ i.bloodgroup }}</td>
                                     <td>{{ i.specialization }}</td>
+                                    <td>{{ i.nmcnumber }}</td>
+
                                     <td>{{ i.address }}</td>
+                                    <td><a href="{% url 'admin_delete_doctor' i.id i.email %}" onclick="return confirm('Are you sure you want to delete?')" class="btn btn-primary">Update</a></td>
                                     <td><a href="{% url 'admin_delete_doctor' i.id i.email %}" onclick="return confirm('Are you sure you want to delete?')" class="btn btn-danger">Delete</a></td>
                                 </tr>
                                 {% endfor %}

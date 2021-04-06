@@ -34,10 +34,7 @@
                                         <td>Appointment Date:</td>
                                         <td>{{i.appointmentdate}}</td>
                                     </tr>
-                                    <tr>
-                                        <td>Appointment Time:</td>
-                                        <td>{{i.appointmenttime}}</td>
-                                    </tr>
+                                    
                                     <tr>
                                         <td>Symptoms:</td>
                                         <td>{{i.symptoms}}</td>
@@ -45,9 +42,16 @@
                                     <tr>
                                         <td>Add Prescription:</td>
                                         <form method="post" >
-                                        <td>{% csrf_token %}
-                                            <textarea class="form-control" name="prescription"></textarea>
-                                            <input type="hidden" value="{{i.id}}" name="idofappointment">
+                                            <td>
+                                                {% csrf_token %}
+                                                <textarea class="form-control" name="prescription"></textarea><br />
+                                                <div class="form-row form-group">
+                                                    <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">Follow Up Date</label></div>
+                                                    <div class="col-sm-6 input-column">
+                                                        <input class="form-control" type="date" name="followupdate" required="">
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" value="{{i.id}}" name="idofappointment">
                                             </td>
                                             <td><input type="submit" class="btn btn-danger "value="Add Prescription"></td>
                                         </form>
@@ -87,11 +91,15 @@
                                     <tr>
                                         <td>Symptoms:</td>
                                         <td>{{j.symptoms}}</td>
-                                    </tr> 
+                                    </tr>
                                     <tr>
                                         <td>Prescription</td>
                                         <td>{{j.prescription}}</td>
-                                    </tr> 
+                                    </tr>
+                                    <tr>
+                                        <td>Next Visit Date</td>
+                                        <td>{{j.followupdate}}</td>
+                                    </tr>
                                 </table>
                             </div>
                         </li>

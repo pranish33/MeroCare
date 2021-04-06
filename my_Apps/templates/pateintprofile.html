@@ -11,7 +11,8 @@
     <div id="wrapper">
         {% include 'patient_nav.html' %}
         <div class="page-content-wrapper">
-            <div class="container-fluid"><a class="btn btn-link" role="button" id="menu-toggle" href="#menu-toggle"><i class="fa fa-bars"></i></a>
+            <div class="container-fluid">
+                <a class="btn btn-link" role="button" id="menu-toggle" href="#menu-toggle"><i class="fa fa-bars"></i></a>
                 <div class="row register-form">
                     <div class="col-md-8 offset-md-2">
                         {% for d in patient_detials %}
@@ -82,10 +83,10 @@
     </div>
     <div class="scroll-top-wrapper"><span class="scroll-top-inner"><i class="fa fa-arrow-circle-up"></i></span></div>
     <script src="{% static 'js/jquery.min.js' %}"></script>
-<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
-<script src="{% static 'js/back-to-top-scroll.js' %}"></script>
-<script src="{% static 'js/Bold-BS4-Animated-Back-To-Top.js' %}"></script>
-<script src="{% static 'js/bs-init.js' %}"></script>
-<script src="{% static 'js/Sidebar-Menu.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/back-to-top-scroll.js' %}"></script>
+    <script src="{% static 'js/Bold-BS4-Animated-Back-To-Top.js' %}"></script>
+    <script src="{% static 'js/bs-init.js' %}"></script>
+    <script src="{% static 'js/Sidebar-Menu.js' %}"></script>
 </body>
 </html>

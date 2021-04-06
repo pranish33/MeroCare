@@ -1,20 +1,25 @@
 {% include 'include.html' %}
 {% include 'navbar.html' %}
+{% load static %} 
 {% block body %}
-<h1 class="text-center">ABOUT</h1>
-<p class="text-justify" id="about-p">
-    The main motive of this website is to provide a relaible service to our users with guranteed privacy. This website holds the detials of the patient to book their appointment with the doctors and can view their previous appointments, prescriptions,
-    reports etc.
-</p>
-<p class="text-justify" id="about-p1">
-    The patient can view the doctors of their specialisation, so that they can book an appointment with the respective doctor of their intrest. The doctor can view all the details of the appointments so that he can gives the prescirption for the patients.
-    The prescription detials are also saved so that whenever the patient again visits to show the previous treatment taken.
-</p>
-<p class="text-justify" id="about-p-1">
-    The Receptionist in the organisation will handle the outpatients comming to the hospital and maintaint the payments for the consultation through offline.The Admin can add new Doctors, Receptionists, view all the appointments, Delete Doctors account,
-    view the prescriptions given to the patients by doctors.&nbsp;
-</p>
-<div class="scroll-top-wrapper"><span class="scroll-top-inner"><i class="fa fa-arrow-circle-up"></i></span></div>
+<body style="background-image: url('{% static 'img/healthcare-5.jpg' %}');  background-repeat: no-repeat; background-size: cover;">
+       
+        
+    <h1 class="text-center">ABOUT US</h1>
+    <section class="general-area-home">
+        <p class="text-justify" id="about-p">
+            The main motive of this website is to provide a relaible service to our users with guranteed privacy. This website holds the detials of the patient to book their appointment with the doctors and can view their previous appointments, prescriptions,
+            reports etc.
+        </p>
+        <p class="text-justify" id="about-p1">
+            The patient can view the doctors of their specialisation, so that they can book an appointment with the respective doctor of their intrest. The doctor can view all the details of the appointments so that he can gives the prescirption for the patients.
+            The prescription detials are also saved so that whenever the patient again visits to show the previous treatment taken.
+        </p>
+        <p class="text-justify" id="about-p-1">
+            Similary User Will be benifitted from their Personal Health Assistant. The Assistant will allow user to ask question regarding their health and other useful query regarding personal.
+        </p>
+        <div class="scroll-top-wrapper"><span class="scroll-top-inner"><i class="fa fa-arrow-circle-up"></i></span></div>
+    </section>
+</body>
 
-
-{% endblock %}
+    {% endblock %}
