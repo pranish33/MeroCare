@@ -18,10 +18,10 @@
                     <ul class = "collapsible popout text-center" data-collapsible = "accordion">
                         <li class="card">
                             <div class = "card-header collapsible-header">
-                                <h5 style="color:blue;"><a><i class="fa fa-calendar-check-o"></i>  {{ i.patientname }} appointment with {{ i.doctorname }} on {{i.appointmentdate}}</a></h5>
+                                <h5 style="color:green;"><a><i class="fa fa-calendar-check-o"></i>  {{ i.patientname }} appointment with {{ i.doctorname }} on {{i.appointmentdate}}</a></h5>
                             </div>
                             <div class = "card-body collapsible-body">
-                                <table align="center" class="card-text" style="font-size: 19px;">
+                                <table align="center" class="card-text" style="font-size: 18px;">
                                     <tr>
                                         <td>Doctor Name:</td>
                                         <td>{{i.doctorname}}</td>
@@ -40,20 +40,33 @@
                                         <td>{{i.symptoms}}</td>
                                     </tr> 
                                     <tr>
-                                        <td>Add Prescription:</td>
-                                        <form method="post" >
+                                        <td>Prescription:</td>
+
+                                        <form method="post">
                                             <td>
                                                 {% csrf_token %}
-                                                <textarea class="form-control" name="prescription"></textarea><br />
-                                                <div class="form-row form-group">
-                                                    <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">Follow Up Date</label></div>
-                                                    <div class="col-sm-6 input-column">
-                                                        <input class="form-control" type="date" name="followupdate" required="">
-                                                    </div>
+                                                <div class="form-group">
+                                                    
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" name="prescription"></textarea>
+                                                </div>
+                                                
+                                                </tr>
+                                    <tr>
+                                        <td>Follow Up Date</td>
+                                        <td>
+                                            
+                                            <input type="date" name="followupdate">
+</div>
+                                        </td>
+                                    </tr>
                                                 </div>
                                                 <input type="hidden" value="{{i.id}}" name="idofappointment">
                                             </td>
-                                            <td><input type="submit" class="btn btn-danger "value="Add Prescription"></td>
+                                            <tr>
+                                            <td>
+                                            <input type="submit" class="btn btn-danger" value="Add Prescription">
+                                                </tr>
+                                            </td>
                                         </form>
                                     </tr>
                                 </table>
@@ -84,10 +97,7 @@
                                         <td>Appointment Date:</td>
                                         <td>{{j.appointmentdate}}</td>
                                     </tr>
-                                    <tr>
-                                        <td>Appointment Time:</td>
-                                        <td>{{j.appointmenttime}}</td>
-                                    </tr>
+                                   
                                     <tr>
                                         <td>Symptoms:</td>
                                         <td>{{j.symptoms}}</td>

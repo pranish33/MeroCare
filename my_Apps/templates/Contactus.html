@@ -1,0 +1,39 @@
+﻿{% include 'navbar.html' %}
+{% include 'include.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center">Contact Us</h1>
+    <form>
+        <div class="mb-2">
+            <label for="name-input-field" class="form-label">First Name</label>
+            <input class="form-control">
+            <div id="emailHelp" class="form-text"></div>
+        </div>
+        <div class="mb-2">
+            <label for="name-input-field" class="form-label">Last Name</label>
+            <input class="form-control">
+            <div id="emailHelp" class="form-text"></div>
+        </div>
+        <div class="mb-2">
+            <label for="name-input-field" class="form-label">Phone Number</label>
+            <input class="form-control">
+            <div class="form-text" type="tel"></div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" required="">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+      
+        <div class="mb-2">
+            <label for="name-input-field" class="form-label">Message</label>
+            <textarea class="form-control" name="address" required=""></textarea>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

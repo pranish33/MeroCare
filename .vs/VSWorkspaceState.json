@@ -1,10 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\HealthBot\\data",
     "\\MeroCare",
     "\\my_Apps",
-    "\\my_Apps\\static\\css"
+    "\\my_Apps\\static",
+    "\\my_Apps\\templates"
   ],
-  "SelectedNode": "\\MeroCare\\settings.py",
+  "SelectedNode": "\\my_Apps\\models.py",
   "PreviewInSolutionExplorer": false
 }

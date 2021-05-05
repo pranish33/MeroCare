@@ -4,17 +4,28 @@
 {% load static %}
 
 
-<div class="login-dark fluid" style="background-image: url(&quot;{% static 'img/health-care-6.jpg' %}&quot;);">
+<div class="login-dark fluid" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('{% static 'img/logo.jfif' %}');
+        background-repeat: no-repeat;
+        background-size: cover;
+   ">
     <form method="post">
         {% csrf_token %}
         <h2 class="sr-only">Login Form</h2>
         <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
         <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+        <a class="" href="{%url 'reset_password' %}">Forgot Password?</a><br />
         <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
         <div class="form-group">
-        <button class="btn btn-primary btn-block" type="submit">Log In</button>
-            </div><a class="forgot" href="{%url 'createaccountpage' %}">New user? Create Account</a>
+            <button class="btn btn-primary btn-block" type="submit">Log In</button>
+
+        </div>
+        <a class="" href="{%url 'createaccountpage' %}">New user? Create Account</a><br />
+        <a class="" href="{%url 'login_admin' %}">Admin Login</a>
+        <div class="footer text-center text-white">
+            Copyright &copy; 2021 &mdash; MeroCare
+        </div>
     </form>
-    
+
 </div>
+
 {% endblock %}

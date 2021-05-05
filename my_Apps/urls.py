@@ -3,6 +3,7 @@ from django.urls import path
 #from my_Apps.views import *
 from .import chatbotviews
 from . import views
+from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
@@ -23,6 +24,16 @@ urlpatterns = [
     path('profile/',views.profile,name='profile'),
     path('makeappointments/',views.MakeAppointments,name='makeappointments'),
     path('viewappointments/',views.viewappointments,name='viewappointments'),
+    path('viewhealthrecords/',views.viewhealthrecords,name='viewhealthrecords'),
+    path('contact/',views.contactus,name='contactus'),
     path('PatientDeleteAppointment<int:pid>',views.patient_delete_appointment,name='patient_delete_appointment'),
     path('logout/',views.Logout,name='logout'),
+    #For Forgot Password and Reset Password
+    path('reset_password/', auth_views.PasswordResetView.as_view(template_name='forgot.html'), name="reset_password"),
+    path('reset_password_sent/', auth_views.PasswordResetDoneView.as_view(), name="password_reset_done"),
+    path('reset/<uidb64>/<token>', auth_views.PasswordResetConfirmView.as_view(template_name='reset.html'), name="password_reset_confirm"),
+    path('reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(template_name='passwordresetcomplete.html'), name="password_reset_complete"),
+
+    
+
 ]

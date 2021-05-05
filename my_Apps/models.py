@@ -32,6 +32,15 @@ class Patient(models.Model):
 
 	def __str__(self):
 		return self.name
+
+class Contact(models.Model):
+	name = models.CharField(max_length=50)
+	email = models.EmailField(unique=True)
+	phonenumber = models.CharField(max_length=15)
+	message = models.TextField()
+	
+	def __str__(self):
+		return self.name
 	
 	
 
@@ -50,3 +59,4 @@ class Appointment(models.Model):
 	
 	def __str__(self):
 		return self.patientname+" you have appointment with "+self.doctorname
+

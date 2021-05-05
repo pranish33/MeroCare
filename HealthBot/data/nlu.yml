@@ -192,7 +192,7 @@ nlu:
     - diag
     - dig
 
-- intent: symptoms
+- intent: diabetes_symptoms
   examples: |
     - symptom
     - sign
@@ -200,39 +200,67 @@ nlu:
     - what are the sign and symptoms
     - what are the sign
     - what are the sign
+    - what are the symptoms of diabetes
+    - symptoms of diabetes
+    - sign of diabetes
+    - diabetes symptoms
+    - diabet symp
+    - symps of diabetes
 
-- intent: types
+- intent: diabetes_types
   examples: |
 
     - type
     - types
     - what are the types of diabetes
     - diabetes types
-    - how many types of symptoms are there in diabetes?
+    - how many types of symptoms are there in diabetes
+    - types of diabe
+    - dia typ
+    - typ 
+    - typs
 
-- intent: type1_diabetes
+- intent: type1_diabetes_symptoms
   examples: |
 
+    - type 1 symptom
+    - type 1 sign
+    - symptoms of type 1
+    - what are the sign and symptoms of type 1 diabetes
+    - what are the sign of type 1
+    - what are the sign of type 1
     - type1
-    - explain type1 diabetes
-    - Tell me about type 1 diabetes
-    - what is  type 1
+    - typ1
+    - typ 1
+    - type 1 diabetes
+    - typ 1 diab
 
-- intent: type2_diabetes
+
+- intent: type2_diabetes_symptoms
   examples: |
 
-    - type2
-    - explain type 2 diabetes
-    - Tell me about type 2 diabetes
-    - what is  type 2
+    - type 2 symptom
+    - type 2 sign
+    - symptoms of type 2
+    - what are the sign and symptoms of type 2 diabetes
+    - what are the sign of type 2
+    - what are the sign of type 2
+    - type2 symptoms
+    - typ2 symps
+    - typ 2 smptoms
+    - type 2 diabetes symptoms
+    - typ 2 diab symspp
 
 - intent: diabetes
   examples: |
-
+    - diab
+    - betes
     - diabetes
     - explain diabetes
     - Tell me about diabetes
     - what is  diabetes
+    - db
+    - dibt
 
 - intent: welcome
   examples: |
@@ -243,4 +271,51 @@ nlu:
     - great
     - great keep it up 
     
-    
+- intent: diabetes_symptoms_in_man
+  examples: |
+
+    - symptoms in man
+    - sign in man
+    - symptom man
+    - what are the sign and symptoms in man
+    - what are the sign in man
+    - what are the sign man 
+    - explain diabetes symptoms in man
+
+- intent: diabetes_symptoms_in_woman
+  examples: |
+
+    - symptoms in woman
+    - sign in woman
+    - symptom man
+    - what are the sign and symptoms in woman
+    - what are the sign in woman
+    - what are the sign woman 
+    - diabe in women
+    - diabetes symptoms in woman
+
+- intent: causes_of_diabetes
+  examples: |
+
+    - causes
+    - diabetes causes
+    - diabetes of causes
+    - cause of diabetes
+    - what causes diabetes
+    - what are the causes of diabetes
+    - how diabetes is causes
+
+- intent: diabetes_risk_factors
+  examples: |
+
+    - diabetes risk factor
+    - diabetes factors
+    - waht are the risk
+    - risk
+    - factors
+    - risk factors
+    - what are the risk factors of diabetes
+    - ris fac
+    - factors of diabetes
+
+        

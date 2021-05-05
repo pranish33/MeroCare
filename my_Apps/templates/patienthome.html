@@ -6,7 +6,9 @@
     {% load static %}
 </head>
 
-<body style="background-image: url('{% static 'img/health-care-7.jpg' %}'); background-repeat: no-repeat; background-size: cover;">
+<body style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('{% static 'img/health-care-7.jpg' %}');
+        background-repeat: no-repeat;
+        background-size: cover;">
     {% include 'adminnav.html' %}
     <div id="wrapper">
         {% include 'patient_nav.html' %}

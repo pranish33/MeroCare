@@ -2,24 +2,32 @@
 {% include 'navbar.html' %}
 {% load static %} 
 {% block body %}
-<body style="background-image: url('{% static 'img/healthcare-5.jpg' %}');  background-repeat: no-repeat; background-size: cover;">
-       
-        
-    <h1 class="text-center">ABOUT US</h1>
-    <section class="general-area-home">
-        <p class="text-justify" id="about-p">
-            The main motive of this website is to provide a relaible service to our users with guranteed privacy. This website holds the detials of the patient to book their appointment with the doctors and can view their previous appointments, prescriptions,
-            reports etc.
-        </p>
-        <p class="text-justify" id="about-p1">
-            The patient can view the doctors of their specialisation, so that they can book an appointment with the respective doctor of their intrest. The doctor can view all the details of the appointments so that he can gives the prescirption for the patients.
-            The prescription detials are also saved so that whenever the patient again visits to show the previous treatment taken.
-        </p>
-        <p class="text-justify" id="about-p-1">
-            Similary User Will be benifitted from their Personal Health Assistant. The Assistant will allow user to ask question regarding their health and other useful query regarding personal.
-        </p>
-        <div class="scroll-top-wrapper"><span class="scroll-top-inner"><i class="fa fa-arrow-circle-up"></i></span></div>
-    </section>
+<body style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('{% static 'img/healthcare-4.jpg' %}');
+        background-repeat: no-repeat;
+        background-size: cover;">
+
+    <div class="text-white">
+        <h1 class="text-center">ABOUT US</h1>
+        <section class="general-area-home">
+            <p class="text-justify" id="about-p">
+                The main motive of this website is to provide a relaible service to our users with guranteed privacy. This website holds the detials of the patient to book their appointment with the doctors and can view their previous appointments, prescriptions,
+                reports etc.
+            </p>
+            <p class="text-justify" id="about-p1">
+                The patient can view the doctors of their specialisation, so that they can book an appointment with the respective doctor of their intrest. The doctor can view all the details of the appointments so that he can gives the prescirption for the patients.
+                The prescription detials are also saved so that whenever the patient again visits to show the previous treatment taken.
+            </p>
+            <p class="text-justify" id="about-p-1">
+                Similary User Will be benifitted from their Personal Health Assistant. The Assistant will allow user to ask question regarding their health and other useful query regarding personal.
+            </p>
+            <div class="scroll-top-wrapper"><span class="scroll-top-inner"><i class="fa fa-arrow-circle-up"></i></span></div>
+
+        </section>
+
+    </div>
+    <div class="footer text-center text-white">
+        Copyright &copy; 2021 &mdash; MeroCare
+    </div>
 </body>
 
     {% endblock %}

@@ -41,6 +41,23 @@ intents:
     use_entities: true
 - welcome:
     use_entities: true
+- diabetes_symptoms:
+    use_entities: true
+- diabetes_types:
+    use_entities: true
+- diabetes_symptoms_in_man:
+    use_entities: true
+- diabetes_symptoms_in_woman:
+    use_entities: true
+- type1_diabetes_symptoms:
+    use_entities: true
+- type2_diabetes_symptoms:
+    use_entities: true
+- causes_of_diabetes:
+    use_entities: true
+- diabetes_risk_factors:
+    use_entities: true
+
 entities: []
 slots: {}
 responses:
@@ -57,6 +74,7 @@ responses:
        * Diagnosis
        * Recommendation
        * Reminder
+       Or Ask questions about Diabetes Related
   utter_feature_recommendation:
   - text: |-
       I can give recommendations to help you manage your Diabetes and suggest some lifestyle changes.
@@ -227,14 +245,118 @@ responses:
   utter_iamabot:
   - text: I am a bot, powered by MeroCare.
   utter_diabetes:
-  - text: Diabetes is a metabolic disorder that occurs when your blood sugar (glucose), is too high.
+  - text: Diabetes is a metabolic disorder that occurs when your blood sugar (glucose), is too high. [Know More about diabetes] (https://www.mayoclinic.org/diseases-conditions/diabetes/symptoms-causes/syc-20371444)
   - text: Diabetes is a condition that impairs the body's ability to process blood glucose, otherwise known as blood sugar
   - text: Diabetes mellitus refers to a group of diseases that affect how your body uses blood sugar (glucose).
+
+  utter_diabetes_types:
+  - text: |-
+     There are a few different types of diabetes
+     * Type 1 diabetes is an autoimmune disease. The immune system attacks and destroys cells in the pancreas, where insulin is made. It’s unclear what causes this attack. About 10 percent of people with diabetes have this type.
+     * Type 2 diabetes occurs when your body becomes resistant to insulin, and sugar builds up in your blood.
+     * Prediabetes occurs when your blood sugar is higher than normal, but it’s not high enough for a diagnosis of type 2 diabetes.
+     * Gestational diabetes is high blood sugar during pregnancy. Insulin-blocking hormones produced by the placenta cause this type of diabetes.
+     * A rare condition called diabetes insipidus is not related to diabetes mellitus, although it has a similar name. It’s a different condition in which your kidneys remove too much fluid from your body.
+     Each type of diabetes has unique symptoms, causes, and treatments. [You know more about diabetes types From this link](https://www.healthline.com/health/diabetes/types-of-diabetes)
+     
+  utter_diabetes_symptoms:
+  - text: |-
+     Diabetes symptoms are caused by rising blood sugar.
+
+     General symptoms
+     The general symptoms of diabetes include
+
+     * increased hunger
+     * increased thirst
+     * weight loss
+     * frequent urination
+     * blurry vision
+     * extreme fatigue
+     * sores that don’t heal
+
+  utter_diabetes_symptoms_in_man:
+  - text: |-
+      In addition to the general symptoms of diabetes, men with diabetes may have a decreased sex drive, erectile dysfunction (ED), and poor muscle strength.
+  utter_diabetes_symptoms_in_woman:
+  - text: |-
+      Women with diabetes can also have symptoms such as urinary tract infections, yeast infections, and dry, itchy skin.
+  utter_type1_diabetes_symptoms:
+  - text: |-
+     Symptoms of type 1 diabetes can include
+
+     * extreme hunger
+     * increased thirst
+     * unintentional weight loss
+     * frequent urination
+     * blurry vision
+     * tiredness
+     * It may also result in mood changes.
+
+  utter_type2_diabetes_symptoms:
+  - text: |-
+     Symptoms of type 2 diabetes can include
+
+     * increased hunger
+     * increased thirst
+     * increased urination
+     * blurry vision
+     * tiredness
+     * sores that are slow to heal
+     * It may also cause recurring infections. This is because elevated glucose levels make it harder for the body to heal.
 
   utter_welcome:
   - text: You are welcome
   - text: Pleasure is mine
 
+  utter_diabetes_causes:
+  - text: |-
+      Different causes are associated with each type of diabetes.
+
+      * Type 1 diabetes
+      Doctors don’t know exactly what causes type 1 diabetes. For some reason, the immune system mistakenly attacks and destroys insulin-producing beta cells in the pancreas.
+
+      Genes may play a role in some people. It’s also possible that a virus sets off the immune system attack.
+
+      * Type 2 diabetes
+      Type 2 diabetes stems from a combination of genetics and lifestyle factors. Being overweight or obese increases your risk too. Carrying extra weight, especially in your belly, makes your cells more resistant to the effects of insulin on your blood sugar.
+
+      This condition runs in families. Family members share genes that make them more likely to get type 2 diabetes and to be overweight.
+
+      * Gestational diabetes
+      Gestational diabetes is the result of hormonal changes during pregnancy. The placenta produces hormones that make a pregnant woman’s cells less sensitive to the effects of insulin. This can cause high blood sugar during pregnancy.
+
+      Women who are overweight when they get pregnant or who gain too much weight during their pregnancy are more likely to get gestational diabetes.
+      [Get more information here on the causes of diabetes.] (https://www.healthline.com/health/diabetes-causes)
+  utter_diabetes_risk_factors:
+  - text: |-
+     * Diabetes risk factors
+     Certain factors increase your risk for diabetes.
+
+     * Type 1 diabetes
+     You’re more likely to get type 1 diabetes if you’re a child or teenager, you have a parent or sibling with the condition, or you carry certain genes that are linked to the disease.
+
+     * Type 2 diabetes
+     Your risk for type 2 diabetes increases if you
+
+     are overweight
+     are age 45 or older
+     have a parent or sibling with the condition
+     aren’t physically active
+     have had gestational diabetes
+     have prediabetes
+     have high blood pressure, high cholesterol, or high triglycerides
+     have African American, Hispanic or Latino American, Alaska Native, Pacific Islander, American Indian, or Asian American ancestry
+     Gestational diabetes
+     * Your risk for gestational diabetes increases if you
+
+     are overweight
+     are over age 25
+     had gestational diabetes during a past pregnancy
+     have given birth to a baby weighing more than 9 pounds
+     have a family history of type 2 diabetes
+     have polycystic ovary syndrome (PCOS) 
+
+     [Avoid the most common diabetes complications with these helpful tips.] (https://www.healthline.com/health/type-2-diabetes/6-complications-diabetes)
 actions: []
 forms: {}
 e2e_actions: []

@@ -2,23 +2,53 @@
 {% include 'navbar.html' %}
 {%load static %}
 {% block body %}
-<body  style="background-image: url('{% static 'img/healhcare-4.jpg' %}'); background-repeat: no-repeat; background-size: cover;">
-       
+<body style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('{% static 'img/h15.jpg' %}');background-repeat: no-repeat; background-size: cover;">
+
     <section class="general-area-home">
-        <h1 class="p-3 mb-2  text-white">Book your consultation with your doctor anywhere!</h1>
-        <h3 class="p-3 mb-2  text-white">Create an account and save your profile, then book your apppointment and Record your Perosonal Health too.</h3>
+       
+        <h1 class="p-3 mb-2  text-white"><span class="coldorchange">Consult with personal health care assistant anywhere! </span></h1>
+
         <div class="row" id="row1">
             <div class="col offset-lg-0">
-                <h2 class="p-3 mb-2  text-white">New to this website..</h2><a class="btn btn-primary" href="{% url 'createaccountpage' %}">Create Account</a>
+                <h2 class="p-3 mb-2  text-white">CONNECT WITH US!</h2><a class="btn btn-full" href="{% url 'chatroom' %}">Chatroom</a>
+                <a class="btn btn-full" href="{% url 'contactus' %}">Contact Us</a>
+                <style>
+                    .btn {
+                        display: inline;
+                        padding: 10px 30px;
+                        font-weight: lighter;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        border-radius: 200px;
+                        transition: background-color 0.2s, border 0.2s,color 0.2;
+                    }
+
+                    .btn-full {
+                        background-color: transparent;
+                        color: #f29e20;
+                        margin-right: 20px;
+                        border: 1px solid #bf55ec;
+                    }
+
+                        .btn-full:hover {
+                            background-color: #f29e20;
+                </style>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <p class="text-center p-3 mb-2  text-white">This website allows the you to book an appointment with the respective doctor whom he want to consult, you can view the old appointments, view the prescription, view the reports.<a data-bs-hover-animate="flash" href="{% url 'aboutpage' %}">For more details..</a></p>
+                <p class="text-center p-3 mb-2  text-white"><span class="colorchange">This website allows the you to book an appointment with the respective doctor whom he want to consult, you can view the old appointments, view the prescription, view the reports.</span><a data-bs-hover-animate="flash" href="{% url 'aboutpage' %}">For more details..</a></p>
+                   
             </div>
         </div>
+        <div class="footer text-white">
+            Copyright &copy; 2021 &mdash; MeroCare
+        </div>
     </section>
+    
+
 </body>
+
 
 {% endblock %}
 

@@ -72,19 +72,16 @@
                                         <td>Appointment Date:</td>
                                         <td>{{j.appointmentdate}}</td>
                                     </tr>
-                                  
+
                                     <tr>
                                         <td>Symptoms:</td>
                                         <td>{{j.symptoms}}</td>
                                     </tr>
                                     <tr>
-                                        <td>Prescription:</td>
-                                        <td>{{j.prescription}}</td>
+                                        <td>Delete Appointment:</td>
+                                        <td><a href="{% url 'patient_delete_appointment' j.id %}" onclick="return confirm('Are you sure you want to delete?')" class="btn btn-danger">Delete</a></td>
                                     </tr>
-                                    <tr>
-                                        <td>Follow Up Date</td>
-                                        <td>{{j.followupdate}}</td>
-                                    </tr>
+
                                 </table>
                             </div>
                         </li>

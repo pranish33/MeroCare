@@ -497,12 +497,84 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
-
+  
 - story: Diabetes
   steps:
   - intent: greet
   - action: utter_greet
   - intent: diabetes
   - action: utter_diabetes
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Diabetes_symptoms
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diabetes_symptoms
+  - action: utter_diabetes_symptoms
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Diabetes_symptoms_in_man
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diabetes_symptoms_in_man
+  - action: utter_diabetes_symptoms_in_man
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Diabetes_symptoms_in_woman
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diabetes_symptoms_in_woman
+  - action: utter_diabetes_symptoms_in_woman
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Type1_Diabetes_symptoms
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: type1_diabetes_symptoms
+  - action: utter_type2_diabetes_symptoms
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Type2_Diabetes_symptoms
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: type2_diabetes_symptoms
+  - action: utter_type2_diabetes_symptoms
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Diabetes_types
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diabetes_types
+  - action: utter_diabetes_types
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Diabetes_Causes
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: causes_of_diabetes
+  - action: utter_diabetes_causes
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Diabetes_Risk_Factors
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: diabetes_risk_factors
+  - action: utter_diabetes_risk_factors
   - intent: goodbye
   - action: utter_goodbye
