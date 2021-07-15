@@ -6,37 +6,119 @@ nlu:
     - hey
     - hello
     - hi
-    - hola
     - hello there
     - good morning
     - good evening
-    - moin
     - hey there
     - let's go
     - hey dude
     - goodmorning
     - goodevening
     - good afternoon
-    
+
 - intent: goodbye
   examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
+    - good bye
     - bye
+    - see you
+    - good night
     - goodbye
     - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-    - thanks
-    - thank you
-    - thank
-    - ty
-    - ok
+    - exit
 
+- intent: affirm
+  examples: |
+    - yes
+    - s
+    - ok
+    - okay
+    - indeed
+    - of course
+    - yaa
+    - yeah
+    - y
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - never
+    - n
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nope
+
+- intent: day
+  examples: |
+    - less than 24 hours
+    - more than 24 hours
+    - less
+    - more
+    - l
+    - m
+
+- intent: head_symptom
+  examples: |
+    - headache
+    - pain in head
+    - head ache
+    - head
+    - h
+    - i have headache 
+    - i have headche what should i do
+
+- intent: head_whole
+  examples: |
+    - whole
+    - w
+    - hole
+    - all
+
+- intent: head_sides
+  examples: |
+    - sides
+    - side
+    - s
+
+- intent: head_crown
+  examples: |
+    - crown
+    - crowns
+    - c
+
+- intent: head_eyes
+  examples: |
+    - eyes
+    - eye
+    - e
+
+- intent: flu_symptom
+  examples: |
+    - flu
+    - cough
+    - cold
+    - fever
+    - f
+    - runny rose
+    - vomitting
+    - body ache
+
+- intent: vision_symptom
+  examples: |
+    - vision
+    - v
+    - blur
+- intent: stomach_symptom
+  examples: |
+    - stomachache
+    - pain in stomach
+    - stomach ache
+    - stomach
+    - i have stomach ache
+    - i have stomachache what should i do 
+    
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -44,153 +126,15 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
-- intent: feature_recommendation
-  examples: |
-    - Recommendation
-    - recommendation
-    - recommend
-    - Recommend
-    - recom
-    - Recom
-    - Please provide Recommendation
-    - please provide recommendation
-    - please Recommend
-    - Please recommend
-    - Recommend me
-    - recommend Me
-    - Give Recommendations
-    - give recommendations
-    
-- intent: get_gender_m
-  examples: |
-    - i am Male
-    - M
-    - m
-    - i'm Male
-    - male
-    
-- intent: get_gender_f
-  examples: |
-    - Female
-    - I'm Female
-    - F
-    - f
-    - i'm female
-    - female
-
-- intent: affirm
-  examples: |
-    - Y
-    - y
-    - Yes
-    - yes
-    - Correct
-    - correct
-    - true
-    - True
-    - Ye
-    - yep
-    - Yes I do
-    - I do
-    
-- intent: deny
-  examples: |
-    - N
-    - n
-    - No
-    - no
-    - I don't think so
-    - nah
-    - Nope
-    - nope
-    - Incorrect
-    - incorrect
-    - false
-    - False
-    
-- intent: get_Diabetes_Type1
-  examples: |
-    - i'm Type1 Diabetic
-    - im type 1 diabetic
-    - type 1
-    - Type 1
-    - t1
-    - t 1
-    - T 1
-    - T1
-    - Type1
-    - Type 1 diabetic
-    - type1 diabetic
- 
-- intent: get_Diabetes_Type2
-  examples: |
-    - i'm Type2 Diabetic
-    - im type 2 diabetic
-    - type 2
-    - Type 2
-    - t2
-    - t 2
-    - T 2
-    - T2
-    - Type2
-    - Type 2 diabetic
-    - type2 diabetic
-    
-- intent: feature_reminder
-  examples: |
-    - Reminder
-    - reminder
-    - Remind me
-    - remind me
-    - Remind
-    - remind
-    - rem
-    - Rem
-    - set reminder
-    
-- intent: medicine_reminder
-  examples: |
-    - medicine
-    - meds
-    - Meds
-    - Medicines
-    - med
-    - Med
-    
-- intent: food_reminder
-  examples: |
-    - food
-    - eat
-    - remind me food
-    - lunch
-    - dinner
-    - breakfast
-    
-- intent: appointment_reminder
-  examples: |
-    - appointment
-    - doctor
-    - appoint
-    
-- intent: set_time
-  examples: |
-    - 12pm
-    - 10am
-    - 10:30
-    - 1300
-    - 12 oclock
-    - 1 oclock
-    - 15:29
-    - 1 pm
-    - 2 am
-
-- intent: diagnosis
+- intent: diabetes_diagnosis
   examples: |
     - diagnosis
     - diagnose
     - Diagnosis
     - diag
     - dig
+    - diabetes diagnosis
+    - diabt diag
 
 - intent: diabetes_symptoms
   examples: |
@@ -318,4 +262,23 @@ nlu:
     - ris fac
     - factors of diabetes
 
-        
+
+- intent: thank_you
+  examples: |
+    - thank you
+    - thanks
+    - thnx
+    - thank you very much
+    - great
+    - awesome
+    - wow
+
+
+- intent: Askquestion
+  examples: |
+    - ask question
+    - askquestion
+    - question
+    - i have a question
+    - ask
+     

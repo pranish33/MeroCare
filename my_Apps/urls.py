@@ -12,7 +12,6 @@ urlpatterns = [
     path('about/',views.aboutpage,name='aboutpage'),
     path('login/',views.loginpage,name='loginpage'),
     path('createaccount',views.createaccountpage,name='createaccountpage'),
-    path('admin_login/',views.Login_admin,name='login_admin'),
     path('adminhome/',views.AdminHome,name='adminhome'),
     path('adminlogout/',views.Logout_admin,name='adminlogout'),
     path('adminaddDoctor/',views.adminaddDoctor,name='adminaddDoctor'),
@@ -22,11 +21,13 @@ urlpatterns = [
     path('adminviewAppointment/',views.adminviewAppointment,name='adminviewAppointment'),
     path('home/',views.Home,name='home'),
     path('profile/',views.profile,name='profile'),
+    path('updatepassword/',views.updatepassword,name='updatepassword'),
     path('makeappointments/',views.MakeAppointments,name='makeappointments'),
     path('viewappointments/',views.viewappointments,name='viewappointments'),
     path('viewhealthrecords/',views.viewhealthrecords,name='viewhealthrecords'),
     path('contact/',views.contactus,name='contactus'),
     path('PatientDeleteAppointment<int:pid>',views.patient_delete_appointment,name='patient_delete_appointment'),
+   
     path('logout/',views.Logout,name='logout'),
     #For Forgot Password and Reset Password
     path('reset_password/', auth_views.PasswordResetView.as_view(template_name='forgot.html'), name="reset_password"),

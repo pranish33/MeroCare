@@ -1,253 +1,207 @@
-version: '2.0'
-config:
-  store_entities_as_slots: true
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
-intents:
-- greet:
-    use_entities: true
-- goodbye:
-    use_entities: true
-- feature_recommendation:
-    use_entities: true
-- get_gender_m:
-    use_entities: true
-- get_gender_f:
-    use_entities: true
-- affirm:
-    use_entities: true
-- deny:
-    use_entities: true
-- get_Diabetes_Type1:
-    use_entities: true
-- get_Diabetes_Type2:
-    use_entities: true
-- feature_reminder:
-    use_entities: true
-- bot_challenge:
-    use_entities: true
-- medicine_reminder:
-    use_entities: true
-- food_reminder:
-    use_entities: true
-- appointment_reminder:
-    use_entities: true
-- set_time:
-    use_entities: true
-- diagnosis:
-    use_entities: true
-- diabetes:
-    use_entities: true
-- welcome:
-    use_entities: true
-- diabetes_symptoms:
-    use_entities: true
-- diabetes_types:
-    use_entities: true
-- diabetes_symptoms_in_man:
-    use_entities: true
-- diabetes_symptoms_in_woman:
-    use_entities: true
-- type1_diabetes_symptoms:
-    use_entities: true
-- type2_diabetes_symptoms:
-    use_entities: true
-- causes_of_diabetes:
-    use_entities: true
-- diabetes_risk_factors:
-    use_entities: true
+version: "2.0"
 
-entities: []
-slots: {}
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - day
+  - head_symptom
+  - head_whole
+  - head_sides
+  - head_crown
+  - head_eyes
+  - flu_symptom
+  - vision_symptom
+  - stomach_symptom
+  - bot_challenge
+  - thank_you
+  - diabetes_diagnosis:
+      use_entities: true
+  - diabetes
+  - diabetes_symptoms
+  - diabetes_types
+  - diabetes_symptoms_in_man
+  - diabetes_symptoms_in_woman
+  - type1_diabetes_symptoms 
+  - type2_diabetes_symptoms 
+  - causes_of_diabetes 
+  - diabetes_risk_factors
+  
+    
+
 responses:
   utter_greet:
   - text: |2-
+      Hello!
+      This is your *MeroCare Health Carebot*, here to help you. :')
+       So, How may I help you? Are you facing any of these problems:
+       * Headache
+       * Stomache
+       * Flu
+       * Vision
+       * Diabetes
+       * Ask question
+  utter_did_that_help:
+  - text: |-
+      I hope that this helps you. If you wish to continue please select which problem: 
+      * Headache 
+      * Stomach-ache 
+      * Flu 
+      * Vision.
+      * Diabetes Check
+      * Ask queries regarding diabetes
+      * Else you can exit
+      
+  utter_happy:
+  - text: "Great, carry on!"
 
-       Hello!
-       This is your *MeroCare Diabetesbot*, here to help you. :')
+  utter_thanks: 
+  - text: |-
+      It's my pleasure!
 
-       Diabetes is a manageable condition, but if left untreated it can cause serious harm.
+  utter_askquestion: 
+  - text: |-
+      So, Ask me what are your questions
 
-       Here's how I can help you.
-       Select one of these options: 
-       * Diagnosis
-       * Recommendation
-       * Reminder
-       Or Ask questions about Diabetes Related
-  utter_feature_recommendation:
-  - text: |-
-      I can give recommendations to help you manage your Diabetes and suggest some lifestyle changes.
-      Before that, I need you to answer some simple questions.
-  utter_get_gender:
-  - text: "What's your Gender (M|F):"
-  utter_get_age_group:
-  - text: 'Are you above the age of 45? (Y|N):'
-  utter_get_Diabetes_Type:
-  - text: |
-      One last question,
-       What's your Diabetes Type? (Type1|Type2):
-       - Type 1: Your body does not produce Insulin at all
-       - Type 2: Your body does not respond to Insulin as it should
-  utter_male_yes_type1:
-  - text: |-
-      Exercise is an important part of treating type 1. 
-      But it isn’t as simple as going for a run. Exercise affects your blood sugar levels.
-      So you have to balance your insulin dose and the food you eat with any activity, even simple tasks around the house or yard.
-      Knowledge is power. Check your blood sugar before, during, and after an activity to find out how it affects you.
-      Some things will make your levels go up; others won't. You can lower your insulin or have a snack with carbs to keep it from dropping too low.
-      If your blood sugar is high -- above 240 mg/dL -- test for ketones, the acids that can result from high sugar levels.
-      If they’re OK, you should be good to go. If they’re high, skip the workout. You’ll also need to understand how food affects your blood sugar.
-      Once you know the roles that carbs, fats, and protein play, you can build a healthy eating plan that helps keep your levels where they should be.
-      A diabetes educator or registered dietitian can help you get started.
-  utter_female_yes_type1:
-  - text: |-
-      Exercise is an important part of treating type 1. 
-      But it isn’t as simple as going for a run. Exercise affects your blood sugar levels.
-      So you have to balance your insulin dose and the food you eat with any activity, even simple tasks around the house or yard.
-      Knowledge is power. Check your blood sugar before, during, and after an activity to find out how it affects you.
-      Some things will make your levels go up; others won't. You can lower your insulin or have a snack with carbs to keep it from dropping too low.
-      If your blood sugar is high -- above 240 mg/dL -- test for ketones, the acids that can result from high sugar levels.
-      If they’re OK, you should be good to go. If they’re high, skip the workout. You’ll also need to understand how food affects your blood sugar.
-      Once you know the roles that carbs, fats, and protein play, you can build a healthy eating plan that helps keep your levels where they should be.
-      A diabetes educator or registered dietitian can help you get started.
-  utter_male_no_type1:
-  - text: |-
-      Exercise is an important part of treating type 1.
-      But it isn’t as simple as going for a run. Exercise affects your blood sugar levels.
-       So you have to balance your insulin dose and the food you eat with any activity, even simple tasks around the house or yard.
-       Knowledge is power. Check your blood sugar before, during, and after an activity to find out how it affects you.
-       Some things will make your levels go up; others won't. You can lower your insulin or have a snack with carbs to keep it from dropping too low.
-       If your blood sugar is high -- above 240 mg/dL -- test for ketones, the acids that can result from high sugar levels.
-       If they’re OK, you should be good to go. If they’re high, skip the workout. You’ll also need to understand how food affects your blood sugar.
-       Once you know the roles that carbs, fats, and protein play, you can build a healthy eating plan that helps keep your levels where they should be.
-       A diabetes educator or registered dietitian can help you get started.
-       
-  utter_female_no_type1:
-  - text: |-
-      Exercise is an important part of treating type 1.
-      But it isn’t as simple as going for a run. Exercise affects your blood sugar levels.
-       So you have to balance your insulin dose and the food you eat with any activity, even simple tasks around the house or yard.
-       Knowledge is power. Check your blood sugar before, during, and after an activity to find out how it affects you.
-       Some things will make your levels go up; others won't. You can lower your insulin or have a snack with carbs to keep it from dropping too low.
-       If your blood sugar is high -- above 240 mg/dL -- test for ketones, the acids that can result from high sugar levels.
-       If they’re OK, you should be good to go. If they’re high, skip the workout. You’ll also need to understand how food affects your blood sugar.
-       Once you know the roles that carbs, fats, and protein play, you can build a healthy eating plan that helps keep your levels where they should be.
-       A diabetes educator or registered dietitian can help you get started.
-       
-  utter_male_yes_type2:
-  - text: |-
-      Balancing your meals can improve your bodily health and delay the onset of diabetes symptoms.
-      Try to get an even mixture of:
-      - starches
-      - fruits and vegetables
-      - fats
-      - proteins
-      You should avoid excess sugar, especially in carbonated drinks such as soda and in candies.
-      Keep a regular exercise schedule and manage your blood sugar within your exercise regimen.
-      This can allow you to get the full benefits of a workout without feeling shaky, tired, dizzy, or anxious. 
-  utter_female_yes_type2:
-  - text: |-
-      Balancing your meals can improve your bodily health and delay the onset of diabetes symptoms.
-      Try to get an even mixture of:
-      - starches
-      - fruits and vegetables
-      - fats
-      - proteins
-      You should avoid excess sugar, especially in carbonated drinks such as soda and in candies.
-      Keep a regular exercise schedule and manage your blood sugar within your exercise regimen.
-      This can allow you to get the full benefits of a workout without feeling shaky, tired, dizzy, or anxious. 
-  utter_male_no_type2:
-  - text: |-
-      Balancing your meals can improve your bodily health and delay the onset of diabetes symptoms.
-       Try to get an even mixture of:
-       - starches
-       - fruits and vegetables
-       - fats
-       - proteins
-       You should avoid excess sugar, especially in carbonated drinks such as soda and in candies.
-       Keep a regular exercise schedule and manage your blood sugar within your exercise regimen.
-       This can allow you to get the full benefits of a workout without feeling shaky, tired, dizzy, or anxious. 
-  utter_female_no_type2:
-  - text: |-
-      Balancing your meals can improve your bodily health and delay the onset of diabetes symptoms.
-       Try to get an even mixture of:
-       - starches
-       - fruits and vegetables
-       - fats
-       - proteins
-       You should avoid excess sugar, especially in carbonated drinks such as soda and in candies.
-       Keep a regular exercise schedule and manage your blood sugar within your exercise regimen.
-       This can allow you to get the full benefits of a workout without feeling shaky, tired, dizzy, or anxious. 
-  utter_reminder_type:
-  - text: |-
-      Taking your meals and medicine on time, is one of the most important thing in self management of Diabetes.
-      But it gets hard to remember these some times.
-      No worries, Diabetes Bot to the rescue! :D
-
-      I can help you set Reminders for the following, please choose one option.
-      Food | Medicine | Appointment
-  utter_confirm_reminder_medicine:
-  - text: 'Medicine Reminder, Set Time:'
-  utter_confirm_reminder_food:
-  - text: 'Food Reminder, Set Time:'
-  utter_confirm_reminder_appointment:
-  - text: 'Appointment Reminder, Set Time:'
-  utter_reminder_confirmation:
-  - text: Reminder Set!
-  utter_diagnosis:
-  - text: |+
-      I can help you diagnose if you have Diabetes or not.
-       I'll be asking you some questions, to evaluate your Risk Level of Diabetes.
-       Answer them to the best of your knowledge.
-
-  utter_get_bmi:
-  - text: |-
-      And is your BMI above 25? (Y|N)
-       Don't worry if you don't remember it.
-       You can check your BMI here: [Check BMI](https://www.calculator.net/bmi-calculator.html)
-  utter_get_symptoms:
-  - text: |-
-      Okay now the most important one!
-       Do you have any of the following symptoms?[Y|N] 
-       - Excessive Hunger 
-       - Excessive Thirst 
-       - Blurred Vision 
-       - Fatigue 
-       - Frequent Urination
-       - Cuts healing slowly
-       - Numbness
-  utter_weight_loss:
-  - text: Final question, Did you recently experience Sudden Weight Loss?
-  utter_high_risk:
-  - text: |-
-      You are displaying many of the symptoms of diabetes.
-
-       --You are at HIGH RISK of Diabetes--
-
-       It’s important that you speak to your General Physician ASAP, and get tested for the condition.
-  utter_moderate_risk:
-  - text: |-
-      You are displaying several of the signs of diabetes.
-
-       --You are at Moderate Risk of Diabetes--
-
-       As this condition can be serious if left untreated, it’s advisable that you make an appointment with your local General Physician to discuss your symptoms.
-  utter_low_risk:
-  - text: |-
-      Your results indicate that you probably don’t have diabetes.
-
-       --You are at Low Risk of Diabetes--
-
-       However, as this condition can come on slowly, and many of the symptoms may go unnoticed, make sure to raise any concerns with your General Physician.
   utter_goodbye:
-  - text: Bye! Take good care of yourself. :)
+  - text: |-
+        Bye! Take good care of yourself. :)
+  utter_day:
+  - text: "Since when are you experiencing the pain? less than 24 hours | more than 24 hours"
+  utter_head_stomach_symptom:
+  - text: "Are you facing any stomach problems like acid reflux? Yes | No"
+  utter_head_stomach_response:
+  - text: |- 
+        1. Drink buttermilk 
+        2. Drink Lukewarm water with Lemon 
+        3. Consume apple cider vinegar
+  utter_head_symptom:
+  - text: "Which area of the head does it hurt the most? Whole | Sides | Crown | Around the eye"
+  utter_head_whole_response:
+  - text: |- 
+      This often indicates Stress, Daily Routine Change or Acidity.
+      Following are some remedies for the same : 
+      * Stress –
+      1. Meditate and do breathing exercises 
+      2. Soothe pain with cold compress 
+      3. Take steams
+      * Daily Routine Change -  
+      1. Get Adequate Sleep 
+      2. Avoid direct exposure to sun 
+      3. Stay Hydrated
+      * Acidity - 
+      1. Avoid acidic food 
+      2. Increase fibre intake 
+      3. Have Regular meals
+  utter_head_sides_response:
+  - text: |- 
+        This often indicates Migraine or Sinus.
+        Following are some remedies for the same :
+        * Migraine - 
+        1. Use essential Oils, 
+        2. Try acupressure, 
+        3. Avoid processed food, pickled food or carbonated drinks.
+        * Sinus – 
+        1. Take steam, 
+        2. Use eucalyptus oil, 
+        3. Intake Vitamin C
+  utter_head_crown_response:
+  - text: |- 
+        This often indicates Lack of Sleep, Brain freeze or Tension.
+        Following are some remedies for the same :
+        * Lack of Sleep - 
+        1. Get adequate sleep, 
+        2. Avoid using Electronic device before sleeping.
+        * Brain Freeze - 
+        1. Be in warm environments, 
+        2. Cover your head before going out.
+        * Tension - 
+        1. Relax with Yoga, 
+        2. Drink Water, 
+        3. Dim the lights
+  utter_head_eyes_response:
+  - text: |- 
+        This often indicates Change in Eye number or Stress.
+        Following are some remedies for the same :
+        * Change in Eye number - 
+        1. Get your number checked again, 
+        2. Limit screen time, 
+        3. Take breaks in every 30 minutes.
+        * Stress - 
+        1. Sip Ginger tea, 
+        2. Get a massage, 
+        3. Apply Cold Compress
+  utter_flu_response:
+  - text: |- 
+        This often is caused by high fever, headache, muscle aches, cough, runny nose or vomiting sensation.
+        Following are some remedies for the same :
+        1. Get lots of rest 
+        2. Stay hydrated 
+        3. Gargle with salt water for sore throat 
+        4. Wash your hands often with soap and water
+
+  utter_vision_types:
+  - text: |- 
+        1. Did you use contact lenses for a long time?
+        2. Had lack of sleep?
+        3. Have conditions like arthritis, diabetes or pregnancy? Yes | No
+  utter_dry_eyes_response:
+  - text: |- 
+        You have symptoms of Dry Eyes.
+        It is a common condition that occurs when your tears aren't able to provide adequate lubrication for your eyes.
+        Following are some remedies for the same :
+        1. Artificial tears or other lubricating eye drops, 
+        2. Apply warm compresses 
+        3. Rest your eyes 
+        4. Get more sleep
+  utter_allergy_eyes_response:
+  - text: |- 
+        You have symptoms of Eye Allergies.
+        They occur when the eyes react to allergens such as dust, exposure to sun, bacteria or virus, pollen, smoke or contact lens that irritates them.
+        Following are some remedies for the same :
+        1. Wash your eyes 
+        2. Apply cold compress 
+        3. Stay indoor 
+        4. Apply allergy eye drops
+  utter_stomach_types:
+  - text: "Are you facing any of the following issues: Bloating, Constipation, Gas? Yes | No"
+  utter_gas_response:
+  - text: |- 
+        Following are some remedies for the same :
+        * Bloating - 
+        1. Eat at regular intervals, 
+        2. Replace sodas with water 
+        3. Cut down on salt.
+        * Constipation - 
+        1. Drink more water,
+        2. Increase intake of soluble fibres like oat bran, barley, nuts, seeds as well as some fruits and vegetables 
+        3. Exercise more.
+        * Gas - 
+        1. Sit down during each meal and eat slowly, 
+        2.Avoid soda and other carbonated beverages. 
+        3.Find ways to work exercise into your routine, such as taking a walk after a meal."
+  utter_poison_response:
+  - text: |- 
+        Following are the remedies for some other causes of Stomach-ache :
+        Lower Abdomen Pain - 
+        1. Use a heating bag, 
+        2.Reduce your intake of coffee, tea and alcohol as these can make the pain worse. 
+        3.Get plenty of rest.
+        * Vomiting - 
+        1.Eat light, bland foods 
+        2.Avoid fried, greasy, or sweet foods. 
+        3.Eat slowly and eat smaller, more frequent meals.
+        * Loose Motions - 
+        1.Drink ginger juice, 
+        2. Drink lemon and salt water 
+        3. Eat pomegranate
   utter_iamabot:
-  - text: I am a bot, powered by MeroCare.
+  - text: "I am your's personal health care bot, powered by MeroCare."
   utter_diabetes:
   - text: Diabetes is a metabolic disorder that occurs when your blood sugar (glucose), is too high. [Know More about diabetes] (https://www.mayoclinic.org/diseases-conditions/diabetes/symptoms-causes/syc-20371444)
-  - text: Diabetes is a condition that impairs the body's ability to process blood glucose, otherwise known as blood sugar
-  - text: Diabetes mellitus refers to a group of diseases that affect how your body uses blood sugar (glucose).
+  - text: Diabetes is a condition that impairs the body's ability to process blood glucose, otherwise known as blood sugar. [Know More about diabetes] (https://www.mayoclinic.org/diseases-conditions/diabetes/symptoms-causes/syc-20371444)
+  - text: Diabetes mellitus refers to a group of diseases that affect how your body uses blood sugar (glucose). [Know More about diabetes] (https://www.mayoclinic.org/diseases-conditions/diabetes/symptoms-causes/syc-20371444)
 
   utter_diabetes_types:
   - text: |-
@@ -357,6 +311,63 @@ responses:
      have polycystic ovary syndrome (PCOS) 
 
      [Avoid the most common diabetes complications with these helpful tips.] (https://www.healthline.com/health/type-2-diabetes/6-complications-diabetes)
+
+  utter_diabetes_diagnosis:
+  - text: |+
+      I can help you diagnose if you have Diabetes or not.
+       I'll be asking you some questions, to evaluate your Risk Level of Diabetes.
+       Answer them to the best of your knowledge.
+  
+  utter_get_gender:
+  - text: "What's your Gender (M|F):"
+
+  utter_get_age_group:
+  - text: 'Are you above the age of 45? (Y|N):'
+
+  utter_get_bmi:
+  - text: |-
+      And is your BMI above 25? (Y|N)
+       Don't worry if you don't remember it.
+       You can check your BMI here: [Check BMI](https://www.calculator.net/bmi-calculator.html)
+  utter_get_symptoms:
+  - text: |-
+      Okay now the most important one!
+       Do you have any of the following symptoms?[Y|N] 
+       - Excessive Hunger 
+       - Excessive Thirst 
+       - Blurred Vision 
+       - Fatigue 
+       - Frequent Urination
+       - Cuts healing slowly
+       - Numbness
+  utter_weight_loss:
+  - text: Final question, Did you recently experience Sudden Weight Loss?
+  utter_high_risk:
+  - text: |-
+      You are displaying many of the symptoms of diabetes.
+
+       --You are at HIGH RISK of Diabetes--
+
+       It’s important that you speak to your General Physician ASAP, and get tested for the condition.
+  utter_moderate_risk:
+  - text: |-
+      You are displaying several of the signs of diabetes.
+
+       --You are at Moderate Risk of Diabetes--
+
+       As this condition can be serious if left untreated, it’s advisable that you make an appointment with your local General Physician to discuss your symptoms.
+  utter_low_risk:
+  - text: |-
+      Your results indicate that you probably don’t have diabetes.
+
+       --You are at Low Risk of Diabetes--
+
+       However, as this condition can come on slowly, and many of the symptoms may go unnoticed, make sure to raise any concerns with your General Physician.
+
+  
 actions: []
 forms: {}
 e2e_actions: []
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

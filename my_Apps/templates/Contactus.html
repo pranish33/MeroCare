@@ -3,37 +3,46 @@
 {% load static %}
 
 {% block content %}
-<div class="container">
-    <h1 class="text-center">Contact Us</h1>
-    <form>
-        <div class="mb-2">
-            <label for="name-input-field" class="form-label">First Name</label>
-            <input class="form-control">
-            <div id="emailHelp" class="form-text"></div>
-        </div>
-        <div class="mb-2">
-            <label for="name-input-field" class="form-label">Last Name</label>
-            <input class="form-control">
-            <div id="emailHelp" class="form-text"></div>
-        </div>
-        <div class="mb-2">
-            <label for="name-input-field" class="form-label">Phone Number</label>
-            <input class="form-control">
-            <div class="form-text" type="tel"></div>
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" required="">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-      
-        <div class="mb-2">
-            <label for="name-input-field" class="form-label">Message</label>
-            <textarea class="form-control" name="address" required=""></textarea>
-        </div>
 
 
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-</div>
+    <div class="container-fluid my-0 px-0">
+        <img style="width: 1200px; height: 400px;" src="{% static 'img/contact.jpg' %}" class="d-block w-100 mx-0">
+
+    </div>
+    <div class="container text-blck">
+        <h1 class="text-center">Contact Us</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-2">
+                <label for="name-input-field" class="form-label">Name</label>
+                <input class="form-control" name="contactname">
+                <div id="emailHelp" class="form-text"></div>
+            </div>
+
+            <div class="mb-2">
+                <label for="name-input-field" class="form-label">Phone Number</label>
+                <input class="form-control" name="contactphonenumber">
+                <div class="form-text" type="tel"></div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" required="" name="contactemail">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+
+            <div class="mb-2">
+                <label for="name-input-field" class="form-label">Message</label>
+                <textarea class="form-control" name="message" required=""></textarea>
+            </div>
+            {% for message in messages %}
+            <h4>{{ message }}</h4>
+            {% endfor %}
+
+
+
+            <button type="submit" class="btn btn-primary text-center">Submit</button>
+        </form>
+    </div>
+
+
 {% endblock %}

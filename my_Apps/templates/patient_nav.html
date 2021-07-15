@@ -1,11 +1,82 @@
-<div id="sidebar-wrapper">
-    <ul class="sidebar-nav">
-        <li> <a href="{% url 'home' %}">Home</a></li>
-        <li> <a href="{% url 'profile' %}">Profile</a></li>
-        <li> <a href="{% url 'makeappointments' %}">Make Appointments</a></li>
-        <li> <a href="{% url 'viewappointments' %}">View Appointments</a></li>
-        <li> <a href="{% url 'viewhealthrecords' %}">View Health Records</a></li>
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
 
-        <li> <a href="{% url 'logout' %}">Logout</a></li>
-    </ul>
-</div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <script src="{% static 'js/main.js' %}"></script>
+</head>
+<body>
+    
+  
+
+    <!-- Vertical navbar -->
+
+    <div class="vertical-nav bg-white" id="sidebar">
+        <div class="py-4 px-3 mb-4 bg-light">
+            <div class="media d-flex align-items-center">
+                <img loading="lazy" src="{% static 'img/mainicon.jfif' %}" alt="..." width="80" height="80" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+                <div class="media-body">
+                    <h4 class="m-0">{{ user.first_name }}</h4>
+
+                </div>
+            </div>
+        </div>
+
+        <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Dashboard</p>
+
+        <ul class="nav flex-column bg-white mb-0">
+            <li class="nav-item">
+                <a href="{% url 'home' %}" class="nav-link text-dark bg-light">
+                    <i class="fa fa-user-circle mr-3 text-primary fa-fw" aria-hidden="true"></i>
+                    home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'profile' %}" class="nav-link text-dark">
+                    <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                    profile
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'makeappointments' %}" class="nav-link text-dark">
+                    <i class="fa fa-calendar mr-3 text-primary fa-fw" aria-hidden="true" "></i>
+                    book appointments
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'viewappointments' %}" class="nav-link text-dark">
+                    <i class="fa fa-archive mr-3 text-primary fa-fw"></i>
+                    View Appointmets
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'viewhealthrecords' %}" class="nav-link text-dark">
+                    <i class="fa fa-file mr-3 text-primary fa-fw"></i>
+                    View Health Records
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'logout' %}" class="nav-link text-dark">
+                    <i class="fa fa-sign-out mr-3 text-primary fa-fw"></i>
+                    Logout
+                </a>
+            </li>
+        </ul>
+
+
+
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -10,13 +10,13 @@
 <head>
     <link rel="stylesheet" href="{% static 'css/chatroom.css' %}" />
 </head>
-<body style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('{% static 'img/healhcare-4.jpg' %}');
+<body style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)), url('{% static 'img/healhcare-4.jpg' %}');
         background-repeat: no-repeat;
         background-size: cover;
     ">
     <div class="chat-container"></div>
 
-    <script src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js" /></script>
+    <script src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js"></script>
     <script type="text/javascript">
         var chatroom = new window.Chatroom({
             host: "http://localhost:5005",

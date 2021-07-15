@@ -7,19 +7,19 @@
 </head>
 
 <body>
-    {% include 'adminnav.html' %}
+ 
     <div id="wrapper">
         {% include 'doctor_sidenav.html' %}
         <div class="page-content-wrapper">
-            <div class="container-fluid"><a class="btn btn-link" role="button" id="menu-toggle" href="#menu-toggle"><i class="fa fa-bars"></i></a>
-                <div class="row register-form">
+            <div class="container-fluid">
+                <div class="form-group">
                     <div class="col-md-8 offset-md-2">
                         {% for d in doctor_detials %}
                         <form class="custom-form" style="margin-top: 0px;">
-                            <h1>Your Profile</h1>
-                            <div class="form-row form-group">
-                                <div class="col-sm-4 label-column">
-                                    <label class="col-form-label" for="name-input-field">Name </label>
+                            <h1 class="text-center text-light">Profile</h1>
+                            <div class="form-row form-group my-4">
+                                <div class="col-sm-4 label-column ">
+                                    <label class="col-form-label text-light" for="name-input-field">Name </label>
                                 </div>
                                 <div class="col-sm-6 input-column">
                                     <input class="form-control" type="text" readonly="" value="{{ d.name }}">
@@ -27,7 +27,7 @@
                             </div>
                             <div class="form-row form-group">
                                 <div class="col-sm-4 label-column">
-                                    <label class="col-form-label" for="email-input-field">Email </label>
+                                    <label class="col-form-label text-light" for="email-input-field">Email </label>
                                 </div>
                                 <div class="col-sm-6 input-column">
                                     <input class="form-control" type="email" readonly="" value="{{ d.email }}">
@@ -35,14 +35,14 @@
                             </div>
                             <div class="form-row form-group">
                                 <div class="col-sm-4 label-column">
-                                    <label class="col-form-label" for="dropdown-input-field">Gender</label>
+                                    <label class="col-form-label text-light" for="dropdown-input-field">Gender</label>
                                 </div>
                                 <div class="col-sm-6 input-column">
                                     <input type="text" class="form-control" readonly="" value="{{ d.gender }}">
                                 </div>
                             </div>
                             <div class="form-row form-group">
-                                <div class="col-sm-4 label-column">
+                                <div class="col-sm-4 label-column text-light">
                                     <label class="col-form-label" for="name-input-field">Phone Number</label>
                                 </div>
                                 <div class="col-sm-6 input-column">
@@ -50,7 +50,7 @@
                                 </div>
                             </div>
                             <div class="form-row form-group">
-                                <div class="col-sm-4 label-column">
+                                <div class="col-sm-4 label-column text-light">
                                     <label class="col-form-label" for="name-input-field">Address</label>
                                 </div>
                                 <div class="col-sm-6 input-column">
@@ -59,33 +59,28 @@
                             </div>
                             <div class="form-row form-group">
                                 <div class="col-sm-4 label-column">
-                                    <label class="col-form-label" for="name-input-field">NMC Number</label>
+                                    <label class="col-form-label text-light" for="name-input-field">NMC Number</label>
                                 </div>
                                 <div class="col-sm-6 input-column">
                                     <input class="form-control" type="text" value="{{ d.nmcnumber }}" readonly="">
                                 </div>
                             </div>
+
                             <div class="form-row form-group">
-                                <div class="col-sm-4 label-column">
-                                    <label class="col-form-label" for="name-input-field">Blood Group</label>
-                                </div>
-                                <div class="col-sm-6 input-column">
-                                    <input type="text" class="form-control" readonly="" value="{{ d.bloodgroup }}">
-                                </div>
-                            </div>
-                            <div class="form-row form-group">
-                                <div class="col-sm-4 label-column">
+                                <div class="col-sm-4 label-column text-light">
                                     <label class="col-form-label" for="name-input-field">Specialization</label>
                                 </div>
                                 <div class="col-sm-6 input-column">
                                     <input type="text" class="form-control" readonly="" value="{{ d.specialization }}">
                                 </div>
                             </div>
-                            <div class="form-group m-0">
-                                <button type="submit" class="btn btn-primary btn-block"  name="Update Password">
-                                    Reset Password
-                                </button>
-                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <a href="{%url 'updatepassword' %}" class="btn btn-primary btn-center">Update Password</a>
+                                    </div>
+                                </div>
+
                         </form>
                         {% endfor %}
                     </div>

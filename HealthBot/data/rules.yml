@@ -11,3 +11,8 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Say ask question when ever user ask question
+  steps:
+  - intent: Askquestion
+  - action: utter_askquestion

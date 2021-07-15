@@ -7,12 +7,12 @@
 </head>
 
 <body>
-    {% include 'adminnav.html' %}
+
     <div id="wrapper">
         {% include 'doctor_sidenav.html' %}
         <div class="page-content-wrapper">
-            <div class="container-fluid"><a class="btn btn-link" role="button" id="menu-toggle" href="#menu-toggle"><i class="fa fa-bars"></i></a>
-                <h2 class="text-center">UPCOMING APPOINTMENTS</h2>
+            <div class="container-fluid">
+                <h2 class="text-center text-light">YOU HAVE APPOINTMENTS WITH:</h2>
                 <div class="text-center" role="tablist" id="accordion-1">
                     {% for i in upcomming_appointments %}
                     <ul class = "collapsible popout text-center" data-collapsible = "accordion">
@@ -75,7 +75,7 @@
                     </ul>
                     {% endfor %}
                 </div>
-                <h2 class="text-center">PREVIOUS APPIONTMENTS</h2>
+                <h2 class="text-center text-light">PREVIOUS APPIONTMENTS</h2>
                 <div class="text-center" role="tablist" id="accordion-2">
                     {% for j in previous_appointments %}
                     <ul class = "collapsible popout text-center" data-collapsible = "accordion">

@@ -12,8 +12,6 @@ class Doctor(models.Model):
 	gender = models.CharField(max_length=10)
 	phonenumber = models.CharField(max_length=10)
 	address = models.CharField(max_length=100)
-	
-	bloodgroup = models.CharField(max_length=5)
 	specialization = models.CharField(max_length=50)
 	
 
@@ -27,16 +25,14 @@ class Patient(models.Model):
 	#created_at=models.DateTimeField(auto_now_add=True)
 	gender = models.CharField(max_length=10)
 	phonenumber = models.CharField(max_length=10)
-	address = models.CharField(max_length=100)
-	bloodgroup = models.CharField(max_length=5)
-
+	
 	def __str__(self):
 		return self.name
 
 class Contact(models.Model):
-	name = models.CharField(max_length=50)
-	email = models.EmailField(unique=True)
-	phonenumber = models.CharField(max_length=15)
+	contactname = models.CharField(max_length=50)
+	contactemail = models.EmailField(unique=True)
+	contactphonenumber = models.CharField(max_length=15)
 	message = models.TextField()
 	
 	def __str__(self):
@@ -50,7 +46,7 @@ class Appointment(models.Model):
 	patientname = models.CharField(max_length=50)
 	patientemail = models.EmailField(max_length=50)
 	appointmentdate = models.DateField(max_length=10)
-	followupdate = models.DateField(max_length=10)
+	followupdate = models.DateField(null=True, max_length=10)
 	symptoms = models.CharField(max_length=100)
 	status = models.BooleanField()
 	prescription = models.CharField(max_length=200)

@@ -5,11 +5,12 @@
     {% load static %}
 </head>
 <body style="background-image: url(&quot;{% static 'img/star-sky.jpg' %}&quot;);">
-    {% include 'adminnav.html' %}
+    
     <div id="wrapper">
-        {% include 'admin_include.html' %}
+        
+        {% include 'adminnav.html' %}
         <div class="page-content-wrapper">
-            <div class="container-fluid"><a class="btn btn-link" role="button" id="menu-toggle" href="#menu-toggle"><i class="fa fa-bars" style="color: white;"></i></a>
+            <div class="container-fluid">
                 <h1 class="text-center" style="color: white;">You are sucessfully logged in..{{ user.username }}</h1>
             </div>
         </div>

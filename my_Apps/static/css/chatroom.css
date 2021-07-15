@@ -3,12 +3,12 @@
     height: 600px;
     color: #343d4e;
     max-height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/chat1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 0px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/chatbot.png);
+   
+  
+    border-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     letter-spacing: normal;
     overflow: hidden;
     box-shadow: 0 0 0 2px hsla(0,0%,100%,.8)

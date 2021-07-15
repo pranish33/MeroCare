@@ -2,36 +2,89 @@
 <html>
 
 <head>
-    {% include 'include.html' %}
+   
     {% load static %}
+   
 </head>
 
-<body style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('{% static 'img/health-care-7.jpg' %}');
-        background-repeat: no-repeat;
-        background-size: cover;">
-    {% include 'adminnav.html' %}
-    <div id="wrapper">
+<body>
+
+        
         {% include 'patient_nav.html' %}
-        <div class="page-content-wrapper">
-            <div class="container-fluid"><a class="btn btn-link" role="button" id="menu-toggle" href="#menu-toggle"><i class="fa fa-bars"></i></a>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div>
-                            <h1 class="text-center p-3 mb-2  text-white">You are sucessfully logged in..{{ user.first_name }}</h1>
-                            <h3 class="text-center p-3 mb-2  text-white">You can view your appointment and also you can see your precription report.</h3>
-                        </div>
-                    </div>
-                </div>
+    
+    <div class="page-content p-5" id="content">
+      
+        <h2 class="display-4 text-white">Healthy Tips</h2>
+        <p class="lead text-white mb-0">9 practical tips for a healthy and sustainable diet </p>
+        <div class="separator"></div>
+        <div class="row text-white">
+            <div class="col-lg-7">
+                <h1>1.Eat more fruits and vegetables</h1>
+                <p class="lead">
+                    Fruit and vegetables are good for our health, and most come with a low environmental impact. There are exceptions, as some require a lot of resources to transport and keep fresh, so eating these less frequently can increase the sustainability of our diets.  Examples include:
+
+                    fruits and vegetables that are fragile, or require refrigeration (salads and berries)
+                    vegetables that are grown in protected conditions (such as hot-house tomatoes or cucumbers)
+                    foods that use a lot of resources during transport (green beans, mange-touts, or berries imported from the southern hemisphere).
+                </p>
+                <h1>2.Eat locally, when in season</h1>
+                <p class="lead">
+                    Locally-grown foods can be a sustainable choice, if we choose those that are in season where we live. The cost of producing or storing local foods beyond their natural growing seasons could be higher than shipping foods that are in season somewhere else.
+                </p>
+                <h1>3.Avoid eating more than needed, especially treats</h1>
+                <p class="lead">
+                    Consuming only what we need reduces demands on our food supply by decreasing excess production. It also helps to keep us healthy and avoid excessive weight gain. Limiting snacking on energy-dense low-nutrient foods and paying attention to portion sizes are all useful ways to avoid unnecessary overconsumption.
+                </p>
+                <h1>4.Swap animal proteins for plant-based ones</h1>
+                <p class="lead">
+                    In general, more resources are needed to produce animal-based proteins (especially beef), compared to plant-based proteins (such as beans, pulses and some grains). Eating a more plant-based diet also brings health benefits: plant-based food provides more fibre, and has a lower saturated fat content, both of which can contribute to a decreased risk of cardiovascular disease.
+
+                    For meat-eaters, limiting meat consumption to 1-2 times a week, having meat-free days and choosing more sustainable meats like chicken over beef can help us reduce our ecological footprint.
+                    For those choosing a vegan/vegetarian diet, combining different sources of plant-based protein will ensure our protein needs are met.
+                </p>
+                <h1>5.Choose whole grains</h1>
+                <p class="lead">
+                    Non-refined cereals are generally less resource intensive to produce than refined ones as they require fewer processing steps. They are also good for health, reducing our risk of cardiovascular diseases, type 2 diabetes, and overweight.
+
+                    Whole meal bread, whole grain pasta, unrefined barley, buckwheat and quinoa, are great choices.
+                    Brown rice is a good substitute for white rice, but it should be enjoyed in moderation, as a lot of water is used during its production.
+                </p>
+            </div>
+            <div class="col-lg-5">
+                <h1>6.Choose sustainably sourced seafood</h1>
+                <p class="lead">
+                    Fish is a good source of healthy omega-3 fatty acids, which contribute to normal vision, brain function and heart health. However, overfishing is causing wild fish stocks to become depleted. In order to benefit from the necessary nutrients and reduce pressure on wild fish stocks:
+
+                    consume fish and seafood 1-2 times weekly to provide the necessary nutrients and reduce pressure on wild fish stocks.
+                    choose fish and seafood marked with a sustainability label from certified organisations such as the Marine Stewardship Council.
+                </p>
+                <h1>7.Eat dairy products in moderation</h1>
+                <p class="lead">
+                    While milk and dairy production has an important environmental impact, dairy products are an important source of protein, calcium and essential amino acids, and have been linked to reduced risk of several chronic diseases, including metabolic syndrome, high blood pressure, stroke, bowel cancer and type 2 diabetes.
+
+                    Enjoy low-fat unsweetened dairy products daily, but in moderation.
+                    Limit consumption of high-fat cheeses to occasional.
+                    For those of us who choose to eliminate dairy completely, opt for plant-based drinks that are fortified with vitamins and minerals, like calcium.
+                </p>
+                <h1>8.Avoid unnecessary packaging</h1>
+                <p class="lead">
+                    Food packaging, especially when made of non-recyclable materials can have a huge impact on the environment. We all can reduce the amount of packaged products we buy (think of bulk apples versus cling-film wrapped ones), or opt for materials that are biodegradable, fully recyclable, or made from recycled materials.
+                </p>
+                <h1>9.Drink tap water</h1>
+                <p class="lead">
+                    In Europe, the standards of water quality and safety are high. Instead of buying bottled water, we can re-fill a reusable water bottle at the tap as many times as we want. Tap water costs a fraction of the price of bottled water and reduces our ecological footprint.
+                </p>
             </div>
         </div>
     </div>
-{% include 'redirecthome.html' %}
-<script src="{% static 'js/jquery.min.js' %}"></script>
-<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
-<script src="{% static 'js/back-to-top-scroll.js' %}"></script>
-<script src="{% static 'js/Bold-BS4-Animated-Back-To-Top.js' %}"></script>
-<script src="{% static 'js/bs-init.js' %}"></script>
-<script src="{% static 'js/Sidebar-Menu.js' %}"></script>
+    <!-- End demo content -->
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/back-to-top-scroll.js' %}"></script>
+    <script src="{% static 'js/Bold-BS4-Animated-Back-To-Top.js' %}"></script>
+    <script src="{% static 'js/bs-init.js' %}"></script>
+   
 </body>
 
 </html>

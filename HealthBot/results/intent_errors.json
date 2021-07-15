@@ -1,0 +1,10 @@
+[
+  {
+    "text": "s",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "head_sides",
+      "confidence": 0.5733237266540527
+    }
+  }
+]
